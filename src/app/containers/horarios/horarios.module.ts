@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { HorariosComponent } from './horarios.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  declarations: [
+    HorariosComponent
+  ],
+  imports: [],
+  exports: []
 })
 export class HorariosModule { }
