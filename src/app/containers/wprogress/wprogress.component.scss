@@ -1,0 +1,66 @@
+section{
+    font-family: 'Cinzel', serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .progress{
+        width: 80vw;
+        height: 15px;
+        background-color: #777;
+        margin: 10px 0 20px 0;
+        display: flex;
+        flex-direction: row;
+        .progress-bar{
+            display: flex;
+            height: 100%;
+            width: 15%;
+            background-color: #add555;        
+            .darkprogress{
+                background-color:darken( #add555, 15);
+                animation: progress-animation 2.5s infinite cubic-bezier(0.99, 0.99, 0.99, 0.99);
+            }     
+            div{
+                width: 15px;
+                img{
+                    animation-name: girando;
+                    animation-duration: .5s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                    width: 100%;
+                }
+            }
+        }
+    }    
+}
+
+@media screen and (max-width: 768px){
+    section{
+        .progress{
+            .progress-bar{ 
+                .darkprogress{
+                    background-color:darken( #add555, 15);
+                    animation: progress-animation 1.5s infinite cubic-bezier(0.99, 0.99, 0.99, 0.99);                }      
+                div{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }    
+    }
+}
+@keyframes progress-animation{
+    0% { width: 0%; }    
+    50% { width: 90%}    
+    100% { width: 0%}    
+} 
+@keyframes girando {
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+}
+}
