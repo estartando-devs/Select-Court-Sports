@@ -3,16 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './containers/home/home.component';
+import { HomeModule } from './containers/home/home.module';
+import { WprogressModule } from './containers/wprogress/wprogress.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeModule,
+    WprogressModule
   ],
   providers: [],
   bootstrap: [AppComponent]
