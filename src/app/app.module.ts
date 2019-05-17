@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './containers/home/home.module';
 import { WprogressModule } from './containers/wprogress/wprogress.module';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,9 @@ import { WprogressModule } from './containers/wprogress/wprogress.module';
     BrowserModule,
     AppRoutingModule,
     HomeModule,
-    WprogressModule
+    WprogressModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
