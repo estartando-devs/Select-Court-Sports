@@ -13,6 +13,10 @@ export class AppComponent implements OnInit{
   }
 
   handle = () => {
+    this.test()
+  }
+
+  test = () => {
     alert("test handle button")
   }
 }

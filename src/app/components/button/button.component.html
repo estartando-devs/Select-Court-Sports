@@ -1,4 +1,8 @@
-<button (click)="onHandle()" [ngClass]="['btn', clear ? 'clear' : secondary ? 'secondary' : 'primary', isLoading ? 'loading' : '']">
+<button
+  (click)="onHandle()"
+  [ngClass]="['btn', type, isLoading ? 'loading' : '']"
+  [ngStyle]="getStyle()"
+  >
     <i *ngIf="isLoading" class="fas fa-futbol ball"></i>
     <div *ngIf="!isLoading" class="text-button">
       <i *ngIf="icon" [ngClass]="['fas', 'fa-'+icon]"></i>

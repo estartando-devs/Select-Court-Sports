@@ -1,17 +1,19 @@
 <!-- <app-home></app-home> -->
 <app-button
-  secondary=true
+  type="secondary"
   icon="ban">
   Text button
 </app-button>
 <app-button
-  clear=true>
+  type="clear">
   Text button
 </app-button>
 <app-button
   [handle]="handle"
-  [isLoading]=isLoading>
-
+  [isLoading]="isLoading"
+  [style]="{'background-color': 'purple'}"
+  color="black"
+  >
   Text button
 </app-button>
 <app-wprogress></app-wprogress>
