@@ -8,10 +8,12 @@ import { WprogressModule } from './containers/wprogress/wprogress.module';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
