@@ -1,0 +1,55 @@
+@import "../../../theme/variables.scss";
+@import "../../../theme/mixins.scss";
+
+.box-input {
+    @include flex(center, center, initial);
+
+  label {
+      @include flex(center, center, initial);
+      background-color: $primary;
+      height: 30px;
+      width: 30px;
+      padding: 6px;
+      cursor: pointer;
+
+      i{
+          color: #fff;
+          width: 14px;
+          height: auto;
+      }
+  }
+
+  .input {
+    margin: 10px 10px 10px 0;
+    padding: 5px 8px;
+    background-color: #fff;
+    border: 1px solid;
+    border-color: #c4c4c4;
+    height: 30px;
+    width: 200px;
+
+    &:focus{
+        outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $primary;
+      font-weight: 600;
+    }
+
+    &:-moz-placeholder {
+      color: $primary;
+      font-weight: 600;
+    }
+
+    &::-moz-placeholder {
+      color: $primary;
+      font-weight: 600;
+    }
+
+    &:-ms-input-placeholder {
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+}

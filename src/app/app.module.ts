@@ -11,11 +11,17 @@ import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { CourtsModule } from './containers/courts/courts.module'
 import { ButtonComponent } from './components/button/button.component';
+import { InputComponent } from './components/input/input.component'
+
+// To formGroup
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonComponent
+    ButtonComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +31,8 @@ import { ButtonComponent } from './components/button/button.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     FormsModule,
-    CourtsModule
+    CourtsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

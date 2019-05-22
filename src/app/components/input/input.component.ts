@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputComponent implements OnInit {
 
-  constructor() { }
+  @Input() type: string = "text";
+  @Input() color: string = "";
+  @Input() bgColor: string = "";
+  @Input() width: string;
+  @Input() height: string;
+  @Input() id: string;
+  @Input() label: boolean = false;
+  @Input() iconLabel: string;
+  @Input() placeholder: string;
 
-  ngOnInit() {
+  constructor() {}
+
+  getStyle() {
+    return {
+      // ...this.style,
+      'background-color': this.bgColor,
+      'color': this.color,
+      'width': this.width,
+      'height': this.height
+    };
   }
 
+  ngOnInit() {}
 }
