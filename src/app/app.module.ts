@@ -16,7 +16,6 @@ import { InputComponent } from './components/input/input.component'
 // To formGroup
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     AppComponent,
