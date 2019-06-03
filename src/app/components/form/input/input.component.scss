@@ -1,62 +1,52 @@
 @import "../../../../styles.scss";
+// get the icons name in https://fontawesome.com/icons
+
 .box-input {
   @include flex(center, center, initial);
-  @include theme(none, 1px solid, $borderRadiusPrimary);
-  @include box(300px, 50px);
-
-  border-color: #c4c4c4;
+  @include theme(transparent, $borderSolidPrimary, $borderRadiusPrimary);
+  @include box($inputBoxWidth, $inputBoxHeigth);
+  border-color: $borderColorPrimary;
   margin: $marginPrimary;
-  max-width: 90vw;
-
-
-
+  max-width: $maxWidthSecondary;
+  transition: $transitionPrimary;
   label {
       @include flex(center, center, initial);
-      height: 30px;
-      width: 30px;
+      @include box(30px, 30px);
       padding: 6px;
       cursor: pointer;
-
       i{
-          color: rgb(14, 12, 12);
-          width: 14px;
-          height: auto;
+          color: $iconSecondaryColor;
+          @include box(14px, auto);
       }
   }
-
+  
   .input {
-    @include theme(none, none, none);
-
-    // margin: 5px;
+    @include theme(transparent, none, 0);
+    @include box($inputWidth, $inputHeigth);
+    @include text($fontColorSecondary, none, normal, $fontPrimary, $fontWeightSecondary, $fontSizeTertiary);
     padding: 5px 8px;
-    background-color: #fff;
-    // border: 1px solid;
-    // border-color: #c4c4c4;
-    height: 30px;
-    width: 200px;
-
     &:focus{
-        outline: none;
+        @extend %outLineNone;
     }
 
     &::-webkit-input-placeholder {
-      color: $primary;
-      font-weight: 600;
+      color: $fontColorSecondary;
+      font-weight: $fontWeightPrimary;
     }
 
     &:-moz-placeholder {
-      color: $primary;
-      font-weight: 600;
+      color: $fontColorSecondary;
+      font-weight: $fontWeightPrimary;
     }
 
     &::-moz-placeholder {
-      color: $primary;
-      font-weight: 600;
+      color: $fontColorSecondary;
+      font-weight: $fontWeightPrimary;
     }
 
     &:-ms-input-placeholder {
-      color: $primary;
-      font-weight: 600;
+      color: $fontColorSecondary;
+      font-weight: $fontWeightPrimary;
     }
   }
 }

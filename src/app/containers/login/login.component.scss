@@ -2,5 +2,8 @@
 
 .loginContainer{
     @include flex(center, center, column);
-    @include box(100vw, 100vh);
+    @include box($maxWidthPrimary, $maxHeightPrimary);
+    p{
+        @include text($fontColorQuaternary, none, normal, $fontPrimary, $fontWeightSecondary, $fontSizeTertiary);
+    }
 }

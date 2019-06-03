@@ -5,30 +5,30 @@
   border-radius: 25px !important;
   .text-button{
     opacity: 0 !important;
-    transition: 2s;
+    transition: $transitionTertiary;
     transition-delay: 1s;
   }
 }
 
 .text-button{
   opacity: 1;
-  transition: 2s;
+  transition: $transitionTertiary;
   transition-delay: 1s;
 }
 
 .btn{
-  cursor: pointer;
-  @include box(300px, 50px);
-  @include text($fontColorPrimary, none, none, normal, normal, 1.4em);
-  @include theme(none, none, 20px);
-  margin: 15px;
-  max-width: 90vw;
-  transition: .5s;
-  overflow: hidden;
+  @include box($buttonBoxWidth, $buttonBoxHeigth);
+  @include text($fontColorPrimary, none, none, $fontPrimary, normal, $fontSizeQuaternary);
+  @include theme(none, none, $borderRadiusPrimary);
+  @extend %pointerCursor;
+  @extend %hiddenOverflow;
+  margin: $marginPrimary;
+  max-width: $maxWidthSecondary;
+  transition: $transitionPrimary;
   white-space:nowrap;
   text-overflow: ellipsis;
   &:focus {
-    outline: none;
+    @extend %outLineNone;
   }
   .icon{
     color: $fontColorPrimary;
@@ -37,7 +37,7 @@
 
 //BUTTON TYPES ------------------
 .clear{
-  @include theme(transparent, 2px solid $buttonPrimary, none);
+  @include theme(transparent, $borderSolidSeconary $buttonPrimary, none);
   color: $buttonPrimary;
   &:active{
     color: darken($color: $buttonPrimary, $amount: 5);
