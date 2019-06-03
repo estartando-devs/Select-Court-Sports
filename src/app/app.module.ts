@@ -16,10 +16,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormModule } from 'components/form/form.module';
 import { AuthService } from 'services/auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AuthGuardService } from 'services/auth-guard.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,9 +32,9 @@ import { AngularFireAuth } from '@angular/fire/auth';
     FormsModule,
     FormModule,
     CourtsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [AuthService, AngularFireAuth],
+  providers: [AuthService, AngularFireAuth, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

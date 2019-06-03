@@ -3,7 +3,7 @@
   <app-input label="name" iconLabel="user" placeholder="Nome"></app-input>
   <app-input label="password" iconLabel="unlock" placeholder="Senha"></app-input>
   <app-button type = primary>Entrar</app-button>
-  <app-button type = secondary>Login com o Facebook</app-button>
+  <app-button type = secondary (click)="loginSocial()">Login com o Facebook</app-button>
   <app-button type = terciary>Criar conta</app-button>
-  <p>Esqueceu sua senha? <a RouterLink="">Clique aqui.</a></p>  
+  <p>Esqueceu sua senha? <a RouterLink="">Clique aqui.</a></p>
 </div>
