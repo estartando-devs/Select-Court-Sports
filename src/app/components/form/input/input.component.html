@@ -2,12 +2,11 @@
   <label [style.height]=height *ngIf="label" [for]=id>
       <i [ngClass]="['fas', 'fa-'+iconLabel]"></i>
   </label>
-  <input 
+  <input
   [type]=type
   [ngStyle]="getStyle()"
   [ngClass]="['input', type]"
   [id]=id
   [placeholder]="placeholder"
-  [formControlName]=id
   >
 </span>

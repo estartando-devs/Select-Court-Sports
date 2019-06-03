@@ -12,10 +12,10 @@ export class InputComponent implements OnInit {
   @Input() bgColor: string = "";
   @Input() width: string;
   @Input() height: string;
-  @Input() id: string;
+  @Input() id: string = "0";
   @Input() label: boolean = false;
   @Input() iconLabel: string;
-  @Input() placeholder: string;
+  @Input() placeholder: string = "";
 
   constructor() {}
 
