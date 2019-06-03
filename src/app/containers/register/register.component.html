@@ -1,1 +1,14 @@
-<app-input placeholder= "Nome"></app-input>
+<section class="registerContainer">
+  <p>{{lang.NEW_ACOUNT}}</p>
+  <app-input label="" placeholder="{{lang.PH_NAME}}"></app-input>
+  <app-input label="" placeholder="{{lang.PH_EMAIL}}" type="email" id="1"></app-input>
+  <app-input label="" placeholder="{{lang.PH_DATEBIRTH}}" type="" id="2"></app-input>
+  <app-input label="" placeholder="{{lang.PH_TEL}}" type="number" id="3"></app-input>
+  <app-input label="" placeholder="{{lang.PH_ADRESS}}" id="4"></app-input>
+  <app-input label="" placeholder="{{lang.PH_GENRE}}" id="5"></app-input>
+  <app-input label="" placeholder="{{lang.HEART_TEAM}}" id="6" bord="none" borderradius="0"></app-input>
+  <hr>
+  <app-input label="password" iconLabel="unlock" placeholder="{{lang.PH_PASSWORD}}" id="7" type="password"></app-input>
+  <app-input label="password" iconLabel="unlock" placeholder="{{lang.CONFIRM_PASSWORD}}" id="8" type="password"></app-input>
+  <app-button>{{lang.CREATE_ACCOUNT}}</app-button>
+</section>

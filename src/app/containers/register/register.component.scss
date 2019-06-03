@@ -1,0 +1,14 @@
+@import '../../../styles.scss';
+
+.registerContainer{
+    p{
+        @include box($maxWidthSecondary, auto);
+        @include flex(center, center, column);
+        color: $fontColorSecondary;
+    }
+    @include flex(center, center, column);
+    @include box($maxWidthPrimary, $maxHeightPrimary);
+    hr{
+        border-color: $borderColorPrimary;
+    }
+}
