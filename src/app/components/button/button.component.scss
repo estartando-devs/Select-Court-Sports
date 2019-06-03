@@ -1,5 +1,4 @@
-@import '../../../theme/variables.scss';
-
+@import '../../../styles.scss';
 // get the icons name in https://fontawesome.com/icons
 .loading{
   width: 50px !important;
@@ -19,46 +18,52 @@
 
 .btn{
   cursor: pointer;
+  @include box(300px, 50px);
+  @include text($fontColorPrimary, none, none, normal, normal, 1.4em);
+  @include theme(none, none, 20px);
   margin: 15px;
-  height: 50px;
-  width: 300px;
   max-width: 90vw;
-  font-size: 1.4em;
-  border: none;
-  border-radius: 10px;
-  color: #fff;
   transition: .5s;
   overflow: hidden;
   white-space:nowrap;
   text-overflow: ellipsis;
-
   &:focus {
     outline: none;
   }
   .icon{
-    color: #fff;
+    color: $fontColorPrimary;
   }
 }
+
+//BUTTON TYPES ------------------
 .clear{
-  background-color: transparent;
-  color: $primary;
-  border: 2px solid $primary;
+  @include theme(transparent, 2px solid $buttonPrimary, none);
+  color: $buttonPrimary;
   &:active{
-    color: darken($color: $primary, $amount: 5);
+    color: darken($color: $buttonPrimary, $amount: 5);
   }
 }
 
 .primary{
-  background-color: $primary;
+  background-color: $buttonPrimary;
+  @extend %boxShadow;
   &:active{
-    background-color: darken($color: $primary, $amount: 5);
+    background-color: darken($color: $buttonPrimary, $amount: 5);
   }
 }
 
 .secondary{
-  background-color: $secondary;
+  background-color: $buttonSecondary;
+  @extend %boxShadow;
   &:active{
-    background-color: darken($color: $secondary, $amount: 5);
+    background-color: darken($color: $buttonSecondary, $amount: 5);
+  }
+}
+
+.tertiary{
+  background-color: $buttonTertiary;
+  &:active{
+    background-color: darken($color: $buttonTertiary, $amount: 5);
   }
 }
 
