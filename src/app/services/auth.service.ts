@@ -1,0 +1,19 @@
+import { Injectable } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase/app';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService {
+
+  constructor(private afAuth: AngularFireAuth) { }
+
+  loginSocial() {
+    return this.afAuth.auth.signInWithPopup(new auth.FacebookAuthProvider())
+  }
+  logoutSocial() {
+    return this.afAuth.auth.signOut();
+  }
+
+}

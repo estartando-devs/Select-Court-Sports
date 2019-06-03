@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+// import { AuthService } from 'services/auth.service';
+import { AuthService } from 'services/auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,16 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   title = 'select-court-sports';
-  isLoading = false
+
+  constructor(public auth: AuthService) {}
+
   ngOnInit(){
-    setInterval(()=>this.isLoading = !this.isLoading, 3000)
-  }
-
-  handle = () => {
-    this.test()
-  }
-
-  test = () => {
-    alert("test handle button")
   }
 }
