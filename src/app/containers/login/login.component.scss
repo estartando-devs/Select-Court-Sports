@@ -1,0 +1,6 @@
+@import '../../../styles.scss';
+
+.loginContainer{
+    @include flex(center, center, column);
+    @include box(100vw, 100vh);
+}
