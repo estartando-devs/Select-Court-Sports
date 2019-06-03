@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DbService } from '../../services/db.service';
-import { Court } from '../../models/court'
+import { DbService } from 'services/db.service';
+import { Court } from 'models/court'
 import { Observable } from 'rxjs';
 
 @Component({
@@ -31,6 +31,6 @@ export class CourtsComponent implements OnInit {
   delete(key){
     this.dbService.delete(key);
   }
-  
+
 
 }
