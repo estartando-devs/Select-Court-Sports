@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'services/auth.service';
+import { LANG } from '../../../theme/pt';
 
 @Component({
   selector: 'app-login',
@@ -8,6 +9,7 @@ import { AuthService } from 'services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
+  public lang = LANG;
   constructor(private auth: AuthService) { }
 
   ngOnInit() {

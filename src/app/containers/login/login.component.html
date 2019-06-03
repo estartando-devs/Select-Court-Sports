@@ -1,9 +1,9 @@
 <div class="loginContainer">
   <img src="../../../assets/img/soccer-court.png" alt="logo">
-  <app-input label="name" iconLabel="user" placeholder="Nome"></app-input>
-  <app-input label="password" iconLabel="unlock" type ="password" id="1" placeholder="Senha"></app-input>
-  <app-button type = primary>Entrar</app-button>
-  <app-button type = secondary (click)="loginSocial()">Login com o Facebook</app-button>
-  <app-button type = terciary>Criar conta</app-button>
-  <p>Esqueceu sua senha? <a RouterLink="">Clique aqui.</a></p>
+  <app-input label="name" iconLabel="user" [placeholder]="lang.PH_NAME"></app-input>
+  <app-input label="password" iconLabel="unlock" type ="password" id="1" [placeholder]="lang.PH_PASSWORD"></app-input>
+  <app-button type = primary>{{lang.SIGN_IN}}</app-button>
+  <app-button type = secondary (click)="loginSocial()">{{lang.LOGINFACEBOOK}}</app-button>
+  <app-button type = terciary>{{lang.CREATE_ACCOUNT}}</app-button>
+  <p>{{lang.FORGOT_PASSWORD}}<a RouterLink="">{{lang.CLICK_HERE}}</a></p>
 </div>
