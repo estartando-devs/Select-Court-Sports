@@ -14,6 +14,8 @@ import { CourtsModule } from 'containers/courts/courts.module'
 // To formGroup
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormModule } from 'components/form/form.module';
+import { AuthService } from 'services/auth.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,7 @@ import { FormModule } from 'components/form/form.module';
     CourtsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService, AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
