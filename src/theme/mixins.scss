@@ -8,7 +8,7 @@
 }
 @mixin box($-width, $-heigth){
   width: $-width;
-  height: $-heigth;
+  min-height: $-heigth;
 }
 @mixin theme($-backgroundColor, $-border, $-borderRadius){
   background-color: $-backgroundColor;

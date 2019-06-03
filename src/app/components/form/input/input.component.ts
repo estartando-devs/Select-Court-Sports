@@ -16,6 +16,9 @@ export class InputComponent implements OnInit {
   @Input() label: boolean = false;
   @Input() iconLabel: string;
   @Input() placeholder: string = "";
+  @Input() bord: string = "";
+  @Input() borderbottom: string = "";
+  @Input() borderradius: string = "";
 
   constructor() {}
 
@@ -25,7 +28,10 @@ export class InputComponent implements OnInit {
       'background-color': this.bgColor,
       'color': this.color,
       'width': this.width,
-      'height': this.height
+      'height': this.height,
+      'border': this.bord,
+      'border-bottom': this.borderbottom,
+      'border-radius': this.borderradius,
     };
   }
 

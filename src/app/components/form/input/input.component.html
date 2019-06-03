@@ -1,10 +1,12 @@
-<span class="box-input">
+<span 
+[ngStyle]="getStyle()"
+class="box-input"
+>
   <label [style.height]=height *ngIf="label" [for]=id>
       <i [ngClass]="['fas', 'fa-'+iconLabel]"></i>
   </label>
   <input
   [type]=type
-  [ngStyle]="getStyle()"
   [ngClass]="['input', type]"
   [id]=id
   [placeholder]="placeholder"
