@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, take, tap } from 'rxjs/operators';
 
 @Injectable()
 export class AuthGuardService implements CanActivate {
@@ -12,9 +12,11 @@ export class AuthGuardService implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> {
-      return this.afAuth.authState.pipe(map(user=> {
-          !user ? this.router.navigate(['/login']) : this.router.navigate(['/'])
-        return !!user
+      return this.afAuth.authState.pipe(map(user=>!!user)).pipe(take(1)).pipe(tap(allowed=>{
+        console.log("ALLOWED - ", allowed)
+        if(!allowed){
+          this.router.navigate(['/login'])
+        }
       }))
    }
 

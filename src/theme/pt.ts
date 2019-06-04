@@ -13,7 +13,8 @@ export const LANG = {
     // BUTTON
     SIGN_IN: "Entrar",
     CREATE_ACCOUNT: "Criar conta",
-    LOGINFACEBOOK: "Login com o Facebook",
+    LOGINFACEBOOK: "Entrar com o Facebook",
+    LOGOUT: "Sair",
 
     FORGOT_PASSWORD: "Esqueceu sua senha? ",
     CLICK_HERE: "Clique aqui.",

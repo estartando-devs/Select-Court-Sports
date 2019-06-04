@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { DbService } from 'services/db.service';
 import { Court } from 'models/court'
 import { Observable } from 'rxjs';
+import { AuthService } from 'services/auth.service';
+import { LANG } from '../../../theme/pt';
 
 @Component({
   selector: 'app-courts',
@@ -11,11 +13,12 @@ import { Observable } from 'rxjs';
 export class CourtsComponent implements OnInit {
 
   public courts: any;
+  public lang = LANG;
 
   public item: Court;
   public key: string = '';
 
-  constructor(public dbService: DbService){
+  constructor(private auth: AuthService, public dbService: DbService){
     this.courts = this.dbService.getAll();
   }
 
@@ -32,5 +35,9 @@ export class CourtsComponent implements OnInit {
     this.dbService.delete(key);
   }
 
+  logout(){
+    this.auth.logoutSocial()
+    window.location.reload()
+  }
 
 }

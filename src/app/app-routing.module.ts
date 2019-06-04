@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: "", component: WprogressComponent},
   {path: "login",loadChildren: () => import('./containers/login/login.module').then(mod => mod.LoginModule)},
   {path:"home",component: HomeComponent},
-  {path: "test-service", component: CourtsComponent}
+  {path: "test-service", component: CourtsComponent, canActivate: [AuthGuardService]}
 ];
 
 @NgModule({
