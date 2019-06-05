@@ -3,7 +3,7 @@ import { DbService } from 'services/db.service';
 import { Court } from 'models/court'
 import { Observable } from 'rxjs';
 import { AuthService } from 'services/auth.service';
-import { LANG } from '../../../theme/pt';
+import { LANG } from 'src/theme/pt';
 
 @Component({
   selector: 'app-courts',

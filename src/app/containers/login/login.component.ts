@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'services/auth.service';
-import { LANG } from '../../../theme/pt';
+import { LANG } from 'src/theme/pt';
 
 @Component({
   selector: 'app-login',
