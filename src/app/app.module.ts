@@ -17,6 +17,7 @@ import { FormModule } from 'components/form/form.module';
 import { AuthService } from 'services/auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthGuardService } from 'services/auth-guard.service';
+import { MenuModule } from 'containers/menu/menu.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AuthGuardService } from 'services/auth-guard.service';
     FormModule,
     CourtsModule,
     ReactiveFormsModule,
+    MenuModule
   ],
   providers: [AuthService, AngularFireAuth, AuthGuardService],
   bootstrap: [AppComponent]
