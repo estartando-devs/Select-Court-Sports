@@ -12,18 +12,17 @@
     "postinstall": "link-module-alias"
   },
   "_moduleAliases": {
-    "~root"      : ".",
-    "components" : "src/app/components",
-    "containers" : "src/app/containers",
-    "assets" : "src/assets",
-    "images" : "src/assets/img",
-    "helpers" : "src/helpers",
-    "models" : "src/app/models",
-    "services" : "src/app/services",
-    "app" : "src/app",
-    "environments" : "src/environments"
+    "~root": ".",
+    "components": "src/app/components",
+    "containers": "src/app/containers",
+    "assets": "src/assets",
+    "images": "src/assets/img",
+    "helpers": "src/helpers",
+    "models": "src/app/models",
+    "services": "src/app/services",
+    "app": "src/app",
+    "environments": "src/environments"
   },
-
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.2.0",
