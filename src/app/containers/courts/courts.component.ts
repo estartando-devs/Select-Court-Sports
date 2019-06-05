@@ -19,7 +19,7 @@ export class CourtsComponent implements OnInit {
   public key: string = '';
 
   constructor(private auth: AuthService, public dbService: DbService){
-    this.courts = this.dbService.getAll();
+    this.courts = this.dbService.getAll('court');
   }
 
   ngOnInit() {
@@ -27,12 +27,12 @@ export class CourtsComponent implements OnInit {
   }
 
   add() {
-    this.dbService.add(this.item);
+    this.dbService.add(this.item, 'court');
     this.item = new Court();
   }
 
   delete(key){
-    this.dbService.delete(key);
+    this.dbService.delete(key, 'court');
   }
 
   logout(){
