@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
 
   loginSocial = async () => {
     const  user = await this.auth.loginSocial()
+
     console.log(user)
   }
   async logout() {

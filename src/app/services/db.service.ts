@@ -10,22 +10,22 @@ export class DbService {
 
   constructor(private db: AngularFireDatabase) { }
 
-  add(item: any) {
-    this.db.list('courts').push(item)
+  add(object: any, list: string) {
+    this.db.list(list).push(object)
     .then((result: any) => {
       console.log(result.key);
     });
   }
 
-  update(item: any, key: string) {
-    this.db.list('courts').update(key, item)
+  update(object: any, key: string, list: string) {
+    this.db.list(list).update(key, object)
     .catch((error: any) => {
       console.error(error);
     });
   }
 
-  getAll() {
-    return this.db.list('courts')
+  getAll(list: string) {
+    return this.db.list(list)
     .snapshotChanges()
     .pipe(
       map(changes => {
@@ -34,7 +34,7 @@ export class DbService {
     );
   }
 
-  delete(key: string) {
-    this.db.object(`courts/${key}`).remove()
+  delete(key: string, list: string) {
+    this.db.object(`${list}/${key}`).remove()
   }
 }
