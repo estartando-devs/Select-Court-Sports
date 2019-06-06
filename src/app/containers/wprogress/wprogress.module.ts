@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { WprogressComponent } from './wprogress.component';
-import { CalendarComponent } from 'src/app/components/calendar/calendar.component';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
+import { CalendarComponent } from 'components/calendar/calendar.component';
+import { ModalComponent } from 'components/modal/modal.component';
 
 @NgModule({
     declarations: [

@@ -4,7 +4,7 @@ import { HomeComponent } from './containers/home/home.component';
 import { WprogressComponent } from './containers/wprogress/wprogress.component';
 import { CourtsComponent } from './containers/courts/courts.component';
 import { LoginModule } from './containers/login/login.module';
-import { AuthGuardService } from 'services/auth-guard.service';
+import { AuthGuardService } from 'guard/auth-guard.service';
 import { MenuComponent } from 'containers/menu/menu.component';
 
 const routes: Routes = [

@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { DbService } from 'services/db.service';
 import { Court } from 'models/court'
 import { Observable } from 'rxjs';
-import { AuthService } from 'services/auth.service';
+import { AuthService } from 'auth/auth.service';
 import { LANG } from 'src/theme/pt';
 
 @Component({

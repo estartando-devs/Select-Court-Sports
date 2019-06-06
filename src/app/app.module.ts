@@ -13,10 +13,10 @@ import { CourtsModule } from 'containers/courts/courts.module'
 
 // To formGroup
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormModule } from 'components/form/form.module';
-import { AuthService } from 'services/auth.service';
+import { FormModule } from 'modules/form/form.module';
+import { AuthService } from 'auth/auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AuthGuardService } from 'services/auth-guard.service';
+import { AuthGuardService } from 'guard/auth-guard.service';
 import { MenuModule } from 'containers/menu/menu.module';
 
 @NgModule({
