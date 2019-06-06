@@ -26,16 +26,19 @@ export const MENU = {
     WELCOME: "Bem vindo",
 
     HOME: "HOME",
-    HROUTER: "home",
+    HROUTER: "/home",
 
     LOGIN: "Fazer Login",
-    LROUTER: "login",
+    LROUTER: "/login",
+
+    LOGOUT: "Sair",
+    LOGOUT_ROUTER: "/",
 
     SCHEDULING: "Fazer agendamento",
     SROUTER: "",
 
     CONTACT: "Contato",
-    CROUTER: "contact"
+    CROUTER: "/contact"
 
 
 }

@@ -1,0 +1,13 @@
+@import '../../../../theme/variables.scss';
+@import '../../../../theme/mixins.scss';
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100vw;
+  background-color: $bgColorPrimary;
+  @include flex(space-between, center, row);
+  padding: 0px 20px;
+}
