@@ -1,0 +1,34 @@
+@import '../../../styles.scss';
+.sideNav{
+    @include flex(flex-start, center, column);
+    @include box($maxWidthPrimary, $maxHeightPrimary);
+    @include theme($bgColorSecondary, none, 0);
+    .navHead{
+        @include flex(center, center, column);            
+        @include box($maxWidthPrimary, 30vh);
+        img{
+            margin-top: 10px;
+        }
+        h2{
+            @include text($fontColorPrimary, none, normal, Raleway, 500, 18px);
+            @include flex(center, center, column);            
+            @include box(80%, auto);
+            padding: 10px 0px; 
+            border-bottom: $borderSolidPrimary $borderColorPrimary;
+        }
+    }
+    .trunkNav{
+        @include flex(flex-start, center, column);
+        @include box($maxWidthPrimary, 60vh);
+        @extend %listStyle;
+        li{
+            @include text($fontColorPrimary, none, normal, Raleway, 500, 18px);
+            @include flex(center, center, column);
+            @include box(100%, auto);
+            padding: 10px 0px;
+            &:hover{
+                background-color: rgba(255, 226, 21, 0.5);
+            }
+        }
+    }
+}

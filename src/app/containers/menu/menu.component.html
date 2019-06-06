@@ -1,3 +1,9 @@
-<p>
-  menu works!
-</p>
+<section class="sideNav">
+  <div class="navHead">
+    <img src="../../../assets/img/soccer-court.png" alt="imgProfile">
+    <h2>{{menu.WELCOME}}</h2>
+  </div>
+  <ul class="trunkNav">
+    <li *ngFor="let item of options">{{item.option}}</li>
+  </ul>
+</section>

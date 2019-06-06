@@ -22,3 +22,20 @@ export const LANG = {
     HEART_TEAM: "Qual seu time do coração?",
     NEW_ACOUNT: "Para criar uma nova conta, preencha os campos abaixo:",
 }
+export const MENU = {
+    WELCOME: "Bem vindo",
+
+    HOME: "HOME",
+    HROUTER: "home",
+
+    LOGIN: "Fazer Login",
+    LROUTER: "login",
+
+    SCHEDULING: "Fazer agendamento",
+    SROUTER: "",
+
+    CONTACT: "Contato",
+    CROUTER: "contact"
+
+
+}
