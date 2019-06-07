@@ -7,19 +7,23 @@
     position: fixed;
     z-index: 2;
     top: 0;
-    left: -100vw;
-    span{
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      color: #fff;
-      z-index: 4;
-      font-size: 2em;
-    }
+    right: -100vw;
+    // span{
+    //   position: fixed;
+    //   top: 20px;
+    //   left: 20px;
+    //   color: #fff;
+    //   z-index: 4;
+    //   font-size: 2em;
+    // }
     .navHead{
         @include flex(center, center, column);
         @include box($maxWidthPrimary, 30vh);
-        img{
+        #closeMenu{
+            align-self: flex-end;
+            margin: 0px 18px 0px 0px;
+        }
+        #imgProfile{
             margin-top: 10px;
         }
         h2{
