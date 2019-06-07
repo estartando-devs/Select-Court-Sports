@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -20,6 +20,8 @@ export class InputComponent implements OnInit {
   @Input() borderbottom: string = "";
   @Input() borderradius: string = "";
 
+  @Output() change = new EventEmitter()
+
   constructor() {}
 
   getStyle() {
@@ -33,6 +35,10 @@ export class InputComponent implements OnInit {
       'border-bottom': this.borderbottom,
       'border-radius': this.borderradius,
     };
+  }
+
+  onChange(event){
+    this.change.emit(event)
   }
 
   ngOnInit() {}
