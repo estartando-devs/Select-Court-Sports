@@ -28,7 +28,7 @@ export class ButtonComponent implements OnInit {
   }
 
   onHandle(){
-    this.handle()
+    this.handle && this.handle()
   }
 
 }

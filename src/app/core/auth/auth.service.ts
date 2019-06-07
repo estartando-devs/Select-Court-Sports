@@ -16,8 +16,8 @@ export class AuthService {
     this.isLogged = afAuth.authState.pipe(map(user=>!!user))
   }
 
-  login(email: string, senha: string ){
-    return this.afAuth.auth.signInWithEmailAndPassword(email, senha)
+  login(email: string, password: string ){
+    return this.afAuth.auth.signInWithEmailAndPassword(email, password)
   }
 
   loginSocial() {
@@ -25,12 +25,13 @@ export class AuthService {
   }
 
   logoutSocial() {
-    console.log("chegou")
     return this.afAuth.auth.signOut();
   }
 
-  signup(user){
-    this.db.add(user, "user")
+  async signup(user){
+    await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password)
+    await this.db.add({...user, password: null, confirmPassword: null}, "user")
+    this.login(user.email, user.password)
   }
 
 }

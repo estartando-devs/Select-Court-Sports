@@ -11,18 +11,28 @@ import { User } from 'models/user';
 export class RegisterComponent implements OnInit {
 
   public lang = LANG;
+  private user = {
+    confirmPassword: "123456",
+    displayName: "Alan Luiz",
+    email: "alan@alan",
+    password: "123456",
+    phoneNumber: "21964780203",
+    photoUrl: "",
+    team: "Botafogo"
+  };
   constructor(private auth: AuthService) { }
 
   ngOnInit() {
   }
 
-  signup(){
-    let user = new User()
-    user = {
-      displayName: "Alan",
-      email: "alan.techsafe@hotmail.com"
-    }
+  onChange(event, atr){
+    const val = event.target.value
+    this.user[atr] = val
+  }
 
+  async signup(){
+    const res = await this.auth.signup(this.user)
+    console.log("response signup - ", res)
   }
 
 }
