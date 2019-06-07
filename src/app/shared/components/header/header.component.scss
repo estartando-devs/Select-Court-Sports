@@ -3,7 +3,7 @@
 .navbar{
   position: sticky;
   top: 0;
-  height: 60px;
+  height: 55px;
   width: 100vw;
   background-color: $bgColorPrimary;
   @include flex(center, center, column);
