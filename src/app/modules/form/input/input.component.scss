@@ -1,0 +1,52 @@
+@import "../../../../styles.scss";
+// get the icons name in https://fontawesome.com/icons
+
+.box-input {
+  @include flex(center, center, initial);
+  @include theme(transparent, $borderSolidPrimary, $borderRadiusPrimary);
+  @include box($inputBoxWidth, $inputBoxHeigth);
+  border-color: $borderColorPrimary;
+  margin: $marginPrimary;
+  max-width: $maxWidthSecondary;
+  transition: $transitionPrimary;
+  label {
+      @include flex(center, center, initial);
+      @include box(30px, 30px);
+      padding: 6px;
+      cursor: pointer;
+      i{
+          color: $iconSecondaryColor;
+          @include box(14px, auto);
+      }
+  }
+  
+  .input {
+    @include theme(transparent, none, 0);
+    @include box($inputWidth, $inputHeigth);
+    @include text($fontColorSecondary, none, normal, $fontPrimary, $fontWeightSecondary, $fontSizeTertiary);
+    padding: 5px 8px;
+    &:focus{
+        @extend %outLineNone;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $fontColorSecondary;
+      font-weight: $fontWeightPrimary;
+    }
+
+    &:-moz-placeholder {
+      color: $fontColorSecondary;
+      font-weight: $fontWeightPrimary;
+    }
+
+    &::-moz-placeholder {
+      color: $fontColorSecondary;
+      font-weight: $fontWeightPrimary;
+    }
+
+    &:-ms-input-placeholder {
+      color: $fontColorSecondary;
+      font-weight: $fontWeightPrimary;
+    }
+  }
+}

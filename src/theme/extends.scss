@@ -1,1 +1,22 @@
-@import './theme/variables.scss';
+@import './variables.scss';
+
+%boxShadow{
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+}
+%outLineNone{
+    outline: none;
+}
+%hiddenOverflow{
+    overflow: hidden;
+}
+%pointerCursor{
+  cursor: pointer;
+}
+%listStyle{
+    list-style: none;
+}
+%backgroundImage{
+    background-image: url('assets/img/ball.png');
+    background-attachment: fixed;
+    // background-position: center;
+}

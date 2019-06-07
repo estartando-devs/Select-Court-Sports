@@ -1,0 +1,82 @@
+@import '../../../../styles.scss';
+// get the icons name in https://fontawesome.com/icons
+.loading{
+  width: 50px !important;
+  border-radius: 25px !important;
+  .text-button{
+    opacity: 0 !important;
+    transition: $transitionTertiary;
+    transition-delay: 1s;
+  }
+}
+
+.text-button{
+  opacity: 1;
+  transition: $transitionTertiary;
+  transition-delay: 1s;
+}
+
+.btn{
+  @include box($buttonBoxWidth, $buttonBoxHeigth);
+  @include text($fontColorPrimary, none, none, $fontPrimary, normal, $fontSizeQuaternary);
+  @include theme(none, none, $borderRadiusPrimary);
+  @extend %pointerCursor;
+  @extend %hiddenOverflow;
+  margin: $marginPrimary;
+  max-width: $maxWidthSecondary;
+  transition: $transitionPrimary;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  &:focus {
+    @extend %outLineNone;
+  }
+  .icon{
+    color: $fontColorPrimary;
+  }
+}
+
+//BUTTON TYPES ------------------
+.clear{
+  @include theme(transparent, $borderSolidSeconary $buttonPrimary, none);
+  color: $buttonPrimary;
+  &:active{
+    color: darken($color: $buttonPrimary, $amount: 5);
+  }
+}
+
+.primary{
+  background-color: $buttonPrimary;
+  @extend %boxShadow;
+  &:active{
+    background-color: darken($color: $buttonPrimary, $amount: 5);
+  }
+}
+
+.secondary{
+  background-color: $buttonSecondary;
+  @extend %boxShadow;
+  &:active{
+    background-color: darken($color: $buttonSecondary, $amount: 5);
+  }
+}
+
+.tertiary{
+  background-color: $buttonTertiary;
+  &:active{
+    background-color: darken($color: $buttonTertiary, $amount: 5);
+  }
+}
+
+// Loader -------------------
+
+.ball {
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

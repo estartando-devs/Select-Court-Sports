@@ -1,0 +1,9 @@
+@import '../../../styles.scss';
+
+.loginContainer{
+    @include flex(center, center, column);
+    @include box($maxWidthPrimary, $maxHeightPrimary);
+    p{
+        @include text($fontColorQuaternary, none, normal, $fontPrimary, $fontWeightSecondary, $fontSizeTertiary);
+    }
+}

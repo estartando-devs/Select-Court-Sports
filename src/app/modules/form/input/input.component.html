@@ -1,0 +1,15 @@
+<span
+[ngStyle]="getStyle()"
+class="box-input"
+>
+  <label [style.height]=height *ngIf="label" [for]=id>
+      <i [ngClass]="['fas', 'fa-'+iconLabel]"></i>
+  </label>
+  <input
+  (input)="onChange($event)"
+  [type]=type
+  [ngClass]="['input', type]"
+  [id]=id
+  [placeholder]="placeholder"
+  >
+</span>

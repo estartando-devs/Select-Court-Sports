@@ -1,0 +1,50 @@
+<section class="registerContainer">
+  <p>{{lang.NEW_ACOUNT}}</p>
+  <app-input
+    (change)="onChange($event, 'displayName')"
+    label=""
+    placeholder="{{lang.PH_NAME}}">
+  </app-input>
+  <app-input
+    (change)="onChange($event, 'email')"
+    label=""
+    placeholder="{{lang.PH_EMAIL}}"
+    type="email"
+    id="1">
+  </app-input>
+  <app-input
+    (change)="onChange($event, 'phoneNumber')"
+    label=""
+    placeholder="{{lang.PH_TEL}}"
+    type="number"
+    id="3">
+  </app-input>
+  <app-input
+    (change)="onChange($event, 'team')"
+    label=""
+    placeholder="{{lang.HEART_TEAM}}"
+    id="6"
+    bord="none"
+    borderradius="0">
+  </app-input>
+  <hr>
+  <app-input
+    (change)="onChange($event, 'password')"
+    label="password"
+    iconLabel="unlock"
+    placeholder="{{lang.PH_PASSWORD}}"
+    id="7"
+    type="password">
+  </app-input>
+  <app-input
+    (change)="onChange($event, 'confirmPassword')"
+    label="password"
+    iconLabel="unlock"
+    placeholder="{{lang.CONFIRM_PASSWORD}}"
+    id="8"
+    type="password">
+  </app-input>
+  <app-button
+    (click)="signup()">
+    {{lang.CREATE_ACCOUNT}}</app-button>
+</section>

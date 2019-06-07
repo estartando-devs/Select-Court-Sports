@@ -1,0 +1,42 @@
+<h1>Courts</h1>
+<button type = terciary (click)="logout()">{{lang.LOGOUT}}</button>
+
+<br><br>
+
+<table>
+  <thead>
+    <th>Court Name</th>
+    <th>Adress</th>
+    <th>Price per Hour</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let court of courts | async">
+      <td>{{court.name}}</td>
+      <td>{{court.adress}}</td>
+      <td>{{court.price}}</td>
+      <td (click)="delete(court.key)">remove this</td>
+    </tr>
+  </tbody>
+</table>
+
+<br><br>
+
+<h1>Add New Court</h1>
+<form (ngSubmit)="add()">
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" [(ngModel)]="item.name" name="name" />
+  </div>
+
+  <div class="form-group">
+    <label>Adress</label>
+    <input type="text" class="form-control" [(ngModel)]="item.adress" name="adress" />
+  </div>
+
+  <div class="form-group">
+      <label>Price per hour</label>
+      <input type="number" class="form-control" [(ngModel)]="item.price" name="price" />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

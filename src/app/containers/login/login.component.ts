@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'auth/auth.service';
+import { LANG } from 'src/theme/pt';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  public lang = LANG;
+  constructor(private auth: AuthService) { }
 
   ngOnInit() {
+  }
+
+  loginSocial = async () => {
+    const  user = await this.auth.loginSocial()
+
+    console.log(user)
+  }
+  async logout() {
+    const res = this.auth.logoutSocial();
+    console.log(res)
   }
 
 }
