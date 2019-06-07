@@ -18,7 +18,7 @@
     // }
     .navHead{
         @include flex(center, center, column);
-        @include box($maxWidthPrimary, 30vh);
+        @include box($maxWidthPrimary, 35vh);
         #closeMenu{
             align-self: flex-end;
             margin: 0px 18px 0px 0px;
@@ -36,8 +36,9 @@
     }
     .trunkNav{
         @include flex(flex-start, center, column);
-        @include box($maxWidthPrimary, 60vh);
+        @include box($maxWidthPrimary, 65vh);
         @extend %listStyle;
+        margin-top: 20px;
         li{
             @include text($fontColorPrimary, none, normal, Raleway, 500, 18px);
             @include flex(center, center, column);
