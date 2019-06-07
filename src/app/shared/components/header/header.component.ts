@@ -10,6 +10,10 @@ export class HeaderComponent implements OnInit {
 
   constructor(public menuService: MenuService) { }
 
+  toggleMenu(){
+    this.menuService.toggleMenu()
+  }
+  
   ngOnInit() {
   }
 
