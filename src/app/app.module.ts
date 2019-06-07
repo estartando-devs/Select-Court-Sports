@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeModule } from 'containers/home/home.module';
+import { HomeComponent } from 'containers/home/home.component';
 import { WprogressModule } from 'containers/wprogress/wprogress.module';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'environments/environment';
@@ -22,11 +22,11 @@ import { HeaderModule } from 'components/header/header.module';
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeModule,
     WprogressModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,

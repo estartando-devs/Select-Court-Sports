@@ -15,12 +15,12 @@ section{
         .progress-bar{
             display: flex;
             height: 100%;
-            width: 15%;
-            background-color: #add555;        
+            width: 45%;
+            background-color: #add555;
             .darkprogress{
                 background-color:darken( #add555, 15);
                 animation: progress-animation 2.5s infinite cubic-bezier(0.99, 0.99, 0.99, 0.99);
-            }     
+            }
             div{
                 width: 15px;
                 img{
@@ -32,30 +32,30 @@ section{
                 }
             }
         }
-    }    
+    }
 }
 
 @media screen and (max-width: 768px){
     section{
         .progress{
-            .progress-bar{ 
+            .progress-bar{
                 .darkprogress{
                     background-color:darken( #add555, 15);
-                    animation: progress-animation 1.5s infinite cubic-bezier(0.99, 0.99, 0.99, 0.99);                }      
+                    animation: progress-animation 1.5s infinite cubic-bezier(0.99, 0.99, 0.99, 0.99);                }
                 div{
                     img{
                         width: 100%;
                     }
                 }
             }
-        }    
+        }
     }
 }
 @keyframes progress-animation{
-    0% { width: 0%; }    
-    50% { width: 90%}    
-    100% { width: 0%}    
-} 
+    0% { width: 0%; }
+    50% { width: 90%}
+    100% { width: 0%}
+}
 @keyframes girando {
 from {
     transform: rotate(0deg);
