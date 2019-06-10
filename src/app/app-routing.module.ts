@@ -7,8 +7,8 @@ import { LoginModule } from 'containers/login/login.module';
 import { AuthGuardService } from 'guard/auth-guard.service';
 
 const routes: Routes = [
-  {path: "", component: WprogressComponent},
-  {path: "login",loadChildren: () => import('containers/login/login.module').then(mod => mod.LoginModule)},
+  {path: "", component: HomeComponent},
+  {path: "login",loadChildren: () => import('./containers/login/login.module').then(mod => mod.LoginModule)},
   {path:"home",component: HomeComponent},
   {path: "test-service", component: CourtsComponent, canActivate: [AuthGuardService]},
 ];
