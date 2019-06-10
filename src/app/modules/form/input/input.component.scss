@@ -3,7 +3,7 @@
 
 .box-input {
   @include flex(center, center, initial);
-  @include theme(transparent, $borderSolidPrimary, $borderRadiusPrimary);
+  @include theme(transparent, $borderSolidPrimary, $inputBoxHeigth/2);
   @include box($inputBoxWidth, $inputBoxHeigth);
   border-color: $borderColorPrimary;
   margin: $marginPrimary;
@@ -19,7 +19,7 @@
           @include box(14px, auto);
       }
   }
-  
+
   .input {
     @include theme(transparent, none, 0);
     @include box($inputWidth, $inputHeigth);
