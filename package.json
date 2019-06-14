@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "link-module-alias && ng serve",
-    "build": "ng build --prod --output-path docs --base-href /select-court-sports/",
+    "build": "link-module-alias && ng build --prod --output-path docs --base-href /select-court-sports/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

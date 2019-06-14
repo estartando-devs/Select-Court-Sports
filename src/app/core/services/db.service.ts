@@ -24,14 +24,30 @@ export class DbService {
     });
   }
 
-  getAll(list: string) {
-    return this.db.list(list)
-    .snapshotChanges()
-    .pipe(
-      map(changes => {
-        return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
-      })
-    );
+  getAll(list: string) : Observable<any>{
+    return Observable.create( async emiter=>{
+        const response = await this.db.list(list)
+         .snapshotChanges()
+         .pipe(
+          map(changes => {
+            return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+          })
+         );
+         if(response){
+            emiter.next(response)
+         } else{
+         }
+         emiter.error("algo deu errado")
+         emiter.complete("completou a requisição")
+    }
+    )
+    // return this.db.list(list)
+    // .snapshotChanges()
+    // .pipe(
+    //   map(changes => {
+    //     return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+    //   })
+    // );
   }
 
   delete(key: string, list: string) {

@@ -18,11 +18,15 @@ import { AuthService } from 'auth/auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthGuardService } from 'guard/auth-guard.service';
 import { HeaderModule } from 'components/header/header.module';
+import { CalendarComponent } from 'components/calendar/calendar.component';
+import { ModalComponent } from 'components/modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    CalendarComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
