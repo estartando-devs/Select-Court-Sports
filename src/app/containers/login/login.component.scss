@@ -4,6 +4,13 @@
     @include flex(center, center, column);
     @include box($maxWidthPrimary, $maxHeightPrimary);
     p{
+        margin: 5px 0;
         @include text($fontColorQuaternary, none, normal, $fontPrimary, $fontWeightSecondary, $fontSizeTertiary);
+    }
+
+    .link, .link:visited{
+      @include text($fontColorQuaternary, none, normal, $fontPrimary, $fontWeightSecondary, $fontSizeTertiary);
+      text-decoration: none;
+      font-weight: bold;
     }
 }
