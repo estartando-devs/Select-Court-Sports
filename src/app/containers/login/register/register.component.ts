@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LANG } from 'src/theme/pt';
-import { AuthService } from 'auth/auth.service';
-import { User } from 'models/user';
+import { AuthService } from '../../../core/auth/auth.service';
+import { User } from '../../../shared/models/user';
 
 @Component({
   selector: 'app-register',

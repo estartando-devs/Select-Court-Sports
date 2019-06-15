@@ -11,21 +11,6 @@
     "link": "link-module-alias",
     "postinstall": "link-module-alias"
   },
-  "_moduleAliases": {
-    "~root": ".",
-    "components": "src/app/shared/components",
-    "containers": "src/app/containers",
-    "assets": "src/assets",
-    "images": "src/assets/img",
-    "helpers": "src/helpers",
-    "models": "src/app/shared/models",
-    "modules": "src/app/modules",
-    "services": "src/app/core/services",
-    "guard": "src/app/core/guard",
-    "auth": "src/app/core/auth",
-    "app": "src/app",
-    "environments": "src/environments"
-  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.2.0",

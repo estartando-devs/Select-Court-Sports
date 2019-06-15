@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DbService } from 'services/db.service';
-import { Court } from 'models/court'
+import { DbService } from '../../core/services/db.service';
+import { Court } from '../../shared/models/court'
 import { Observable } from 'rxjs';
-import { AuthService } from 'auth/auth.service';
-import { LANG } from 'src/theme/pt';
+import { AuthService } from '../../core/auth/auth.service';
+import { LANG } from '../../../../src/theme/pt';
 
 @Component({
   selector: 'app-courts',
