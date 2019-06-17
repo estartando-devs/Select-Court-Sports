@@ -1,0 +1,22 @@
+@import '../../../../styles.scss';
+
+.modalContainer {
+  @include flex(center, center, row);
+  position: absolute;
+  z-index: 5;
+  background-color: $bgColorTertiary;
+  top: 0;
+  @include box(100vw, 100vh);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  .modal{
+    @include flex(center, center, column);
+    @include theme(#FFFFFF, initial, 5px);
+    @include box(85vw, 250px);
+    max-width: 500px;
+    padding: 36px 10px;
+    @include text(#4B4B4B, null, null, Raleway, 500, 18px);
+    text-align: center;
+    line-height: 21px;
+  }
+}
