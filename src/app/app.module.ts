@@ -19,12 +19,13 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthGuardService } from './core/guard/auth-guard.service';
 import { HeaderModule } from './shared/components/header/header.module';
 import { CalendarComponent } from './shared/components/calendar/calendar.component';
+import { ContactModule } from './containers/contact/contact.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CalendarComponent
+    CalendarComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,8 @@ import { CalendarComponent } from './shared/components/calendar/calendar.compone
     FormModule,
     HeaderModule,
     CourtsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ContactModule
   ],
   providers: [AuthService, AngularFireAuth, AuthGuardService],
   bootstrap: [AppComponent]
