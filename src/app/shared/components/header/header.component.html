@@ -1,4 +1,7 @@
 <app-menu></app-menu>
 <div class="navbar">
+    <ul class="nav">
+        <li *ngFor="let item of options" (click)="item.action()">{{item.option}}</li>
+    </ul>
     <div id="open" (click)="toggleMenu()" [ngClass]="['fas', 'fa-bars']"></div>
 </div>

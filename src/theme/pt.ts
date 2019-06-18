@@ -28,7 +28,7 @@ export const LANG = {
 export const MENU = {
     WELCOME: "Bem vindo",
 
-    HOME: "HOME",
+    HOME: "Home",
     HROUTER: "/home",
 
     LOGIN: "Fazer Login",
@@ -39,6 +39,9 @@ export const MENU = {
 
     SCHEDULING: "Fazer agendamento",
     SROUTER: "",
+
+    SCHEDULE: "Agendar",
+    SCHROUTER: "/",
 
     CONTACT: "Contato",
     CROUTER: "/contact"

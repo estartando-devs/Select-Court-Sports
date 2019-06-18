@@ -17,3 +17,21 @@
     color: $fontColorPrimary
   }
 }
+
+@include desktop{
+  #open{
+    display: none;
+  }
+  .nav{
+    @include text($fontColorPrimary, none, none, Raleway, 500px, 18px);
+    @include flex(space-around, center, row);
+    list-style: none;
+    li {padding: 0px 10px;}
+  }
+}
+
+@include mobile{
+  .nav{
+    display: none;
+  }
+}
