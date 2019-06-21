@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { LANG } from 'src/theme/pt';
 import { AuthService } from '../../../core/auth/auth.service';
 import { User } from '../../../shared/models/user';
+import { ModalService } from 'src/app/shared/components/modal/modal.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -20,7 +22,17 @@ export class RegisterComponent implements OnInit {
     photoUrl: "",
     team: "Botafogo"
   };
-  constructor(private auth: AuthService) { }
+  constructor(private auth: AuthService, private modalService: ModalService, private router: Router) { }
+
+  toggleModal(){
+    this.modalService.toggleModal()
+  }
+
+
+  goTo(route){
+    this.toggleModal()
+    this.router.navigate([route])
+  }
 
   ngOnInit() {
   }

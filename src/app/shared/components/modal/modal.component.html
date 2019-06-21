@@ -1,5 +1,5 @@
-<section class="modalContainer">
-  <div class="modal">
+<section class="modalContainer" [ngStyle]="{top: open ? 0 : null}" (click)=toggleModal()>
+  <div id="modal" (click)="!toggleModal()" [class]="type">
     <ng-content></ng-content>
   </div>
 </section>

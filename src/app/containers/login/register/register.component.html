@@ -45,13 +45,13 @@
     type="password">
   </app-input>
   <app-button
-    (click)="signup()">
+  (click)="[signup(), toggleModal()]">
     {{lang.CREATE_ACCOUNT}}</app-button>
 </section>
 
-<app-modal>
+<app-modal type="modalDefault">
   <p>Parabéns! <br> Agora você faz parte do time Minha Quadra. <br>
   O que deseja fazer agora?</p>
-  <app-button width="250px" height="40px" margin="15px 10px 10px">Agendar Horario</app-button>
-  <app-button width="250px" height="40px" margin="10px" type="green">Página Inicial</app-button>
+  <app-button (click)="goTo('/')" width="250px" height="40px" margin="15px 10px 10px">Agendar Horario</app-button>
+  <app-button (click)="goTo('/')" width="250px" height="40px" margin="10px" type="green">Página Inicial</app-button>
 </app-modal>
