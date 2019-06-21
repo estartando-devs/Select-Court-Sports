@@ -9,7 +9,6 @@ export const LANG = {
     PH_ADRESS: "Endereço",
     PH_GENRE: "Genero",
 
-
     // BUTTON
     SIGN_IN: "Entrar",
     CREATE_ACCOUNT: "Criar conta",
@@ -45,6 +44,18 @@ export const MENU = {
 
     CONTACT: "Contato",
     CROUTER: "/contact"
+}
 
-
+export const MODELS = {
+  SCHEDULE : {
+    availabel: "Disponível",
+    requested: "Solicitado",
+    canceled: "Cancelado"
+  },
+  PAYMENT_METHOD: {
+    cash: "Dinheiro",
+    credit: "Crédito",
+    debit: "Débito",
+    reserver: "Reservado"
+  }
 }
