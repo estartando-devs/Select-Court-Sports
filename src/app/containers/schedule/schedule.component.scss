@@ -1,0 +1,20 @@
+@import '../../../styles.scss';
+
+.schduleContainer{
+    @include flex(flex-start, center, column);
+    @include box($maxWidthPrimary, $maxHeightPrimary);
+    @include theme($bgColorSecondary,none, 0);
+    .schduleHeader{
+        @include flex(center, center, row);
+        @include box($maxWidthPrimary, auto);
+        margin: 54px 0px 60px 0px;    
+        #whiteBack{
+            position: absolute;
+            left: 0;
+            margin: 0px 0px 0px 23px;        
+        }
+        h2{
+            @include text($fontColorPrimary, none, normal, Raleway, 600, 22px);
+        }
+    }
+}

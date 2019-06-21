@@ -23,7 +23,8 @@ export const LANG = {
     CONFIRM_PASSWORD: "Confirmar senha",
     HEART_TEAM: "Qual seu time do coração?",
     NEW_ACOUNT: "Para criar uma nova conta, preencha os campos abaixo:",
-    PRESENTATION: "Uma nova experiência na pelada com os amigos"
+    PRESENTATION: "Uma nova experiência na pelada com os amigos",
+    DO_SCHEDULES: "Faça seu agendamento"
 }
 export const MENU = {
     WELCOME: "Bem vindo",
@@ -38,7 +39,7 @@ export const MENU = {
     LOGOUT_ROUTER: "/",
 
     SCHEDULING: "Fazer agendamento",
-    SROUTER: "",
+    SROUTER: "/schedule",
 
     SCHEDULE: "Agendar",
     SCHROUTER: "/",

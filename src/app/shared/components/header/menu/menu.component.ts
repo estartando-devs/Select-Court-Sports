@@ -49,6 +49,11 @@ export class MenuComponent implements OnInit {
           option: MENU.CONTACT,
           action: () => this.goTo(MENU.CROUTER),
 
+        },
+        {
+          option: MENU.SCHEDULING,
+          action: () => this.goTo(MENU.SROUTER),
+
         }
       ]
       isLogged ? this.options.push({

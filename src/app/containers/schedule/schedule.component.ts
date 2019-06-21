@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LANG } from 'src/theme/pt';
 
 @Component({
   selector: 'app-schedule',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./schedule.component.scss']
 })
 export class ScheduleComponent implements OnInit {
+  public lang = LANG
 
   constructor() { }
+
+  back(){
+    window.history.back();
+  }
 
   ngOnInit() {
   }
