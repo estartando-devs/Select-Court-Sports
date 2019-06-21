@@ -67,6 +67,13 @@
   }
 }
 
+.green {
+  background-color: $buttonGreen;
+  &:active{
+    background-color: darken($color: $buttonGreen, $amount: 5);
+  }
+}
+
 // Loader -------------------
 
 .ball {
