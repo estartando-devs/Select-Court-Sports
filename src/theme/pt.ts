@@ -22,7 +22,14 @@ export const LANG = {
     CONFIRM_PASSWORD: "Confirmar senha",
     HEART_TEAM: "Qual seu time do coração?",
     NEW_ACOUNT: "Para criar uma nova conta, preencha os campos abaixo:",
-    PRESENTATION: "Uma nova experiência na pelada com os amigos"
+    PRESENTATION: "Uma nova experiência na pelada com os amigos",
+
+    // MODALS
+    WHAT_YOU_WANNA_DO: "O que deseja fazer agora?",
+    CONGRATULATIONS: "Parabéns!",
+    MY_COURT_TEAM: "Agora você faz parte do time Minha Quadra.",
+    MENSAGE_SENDED: "Mensagem enviada com sucesso!"
+
 }
 export const MENU = {
     WELCOME: "Bem vindo",

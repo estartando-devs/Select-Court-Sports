@@ -50,8 +50,8 @@
 </section>
 
 <app-modal type="modalDefault">
-  <p class="pb-10">Parabéns! <br> Agora você faz parte do time Minha Quadra. <br>
-  O que deseja fazer agora?</p>
+  <p class="pb-10"> {{lang.CONGRATULATIONS}}<br> {{lang.MY_COURT_TEAM}}. <br>
+  {{lang.WHAT_YOU_WANNA_DO}}</p>
   <app-button (click)="goTo('/agendar')" width="250px" height="40px" margin="15px 10px 10px">Agendar Horario</app-button>
   <app-button (click)="goTo('/')" width="250px" height="40px" margin="10px" type="green">Página Inicial</app-button>
 </app-modal>
