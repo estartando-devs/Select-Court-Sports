@@ -4,16 +4,21 @@ import { auth } from 'firebase/app';
 import { DbService } from '../services/db.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { User } from 'src/app/shared/models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  public isLogged: Observable<any>
+  public isLogged: Observable<boolean>
+  public user: Observable<User>
 
   constructor(private db: DbService,private afAuth: AngularFireAuth) {
     this.isLogged = afAuth.authState.pipe(map(user=>!!user))
+    this.user = afAuth.authState.pipe(map(user=>{
+      console.log("USUARIO LOGADO --> ", user)
+      return user}))
   }
 
   login(email: string, password: string ){

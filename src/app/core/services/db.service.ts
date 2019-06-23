@@ -24,12 +24,12 @@ export class DbService {
     });
   }
 
-  getAll(list: string) {
+  getAll<T>(list: string): Observable<Array<T>> {
     return this.db.list(list)
     .snapshotChanges()
     .pipe(
       map(changes => {
-        return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+        return Object.assign(changes.map(c => ({ key: c.payload.key, ...c.payload.val() })))
       })
     );
   }

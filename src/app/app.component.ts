@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './core/auth/auth.service';
-import { Schedule } from './shared/models';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,10 +7,10 @@ import { Schedule } from './shared/models';
 })
 export class AppComponent implements OnInit{
   title = 'select-court-sports';
-  schedule = new Schedule()
-  constructor(public auth: AuthService) {}
+  constructor(public auth: AuthService ) {}
 
-  ngOnInit(){}
+  ngOnInit(){
+  }
 
   logout = () => {
     this.auth.logoutSocial()

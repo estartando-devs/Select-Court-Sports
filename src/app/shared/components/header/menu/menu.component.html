@@ -2,10 +2,10 @@
   <!-- <span (click)="toggleMenu()">MENU - {{open}}</span> -->
   <div class="navHead">
     <img id="closeMenu" src="../../../../../assets/img/close.png" alt="closeMenu" (click)="toggleMenu()">
-    <img id="imgProfile" src="../../../assets/img/soccer-court.png" alt="imgProfile">
-    <h2>{{menu.WELCOME}}</h2>
+    <img id="imgProfile" [src]="user && user.photoURL + '?type=square&width=120&height=120'" alt="imgProfile">
+    <h2>{{menu.WELCOME}}, {{user && user.displayName}}</h2>
   </div>
   <ul class="trunkNav">
-    <li *ngFor="let item of options" (click)="item.action()">{{item.option}}</li>
+    <li *ngFor="let item of options" [ngClass]="{active: item.isActive}" (click)="item.action()">{{item.option}}</li>
   </ul>
 </section>

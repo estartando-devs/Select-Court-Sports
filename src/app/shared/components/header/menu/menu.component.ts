@@ -3,6 +3,8 @@ import { Router } from "@angular/router";
 import { LANG, MENU } from 'src/theme/pt';
 import { AuthService } from '../../../../core/auth/auth.service';
 import { MenuService } from './menu.service';
+import { Observable } from 'rxjs';
+import { User } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-menu',
@@ -14,12 +16,15 @@ export class MenuComponent implements OnInit {
   public menu = MENU;
   public open : boolean;
   public options = [];
+  public user: User;
 
   constructor(
     private router:  Router,
     private auth: AuthService,
     private menuService: MenuService
-  ) {}
+  ) {
+    auth.user.subscribe(res => this.user = res)
+  }
 
   toggleMenu(){
     this.menuService.toggleMenu()

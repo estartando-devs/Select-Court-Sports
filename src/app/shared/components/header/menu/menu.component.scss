@@ -17,7 +17,7 @@
     //   font-size: 2em;
     // }
     .navHead{
-        @include flex(center, center, column);
+        @include flex(flex-start, center, column);
         @include box($maxWidthPrimary, 35vh);
         #closeMenu{
             align-self: flex-end;
@@ -25,11 +25,14 @@
         }
         #imgProfile{
             margin-top: 10px;
+            width: 90px;
+            height: 90px;
+            border-radius: 45px;
         }
         h2{
             @include text($fontColorPrimary, none, normal, Raleway, 500, 18px);
             @include flex(center, center, column);
-            @include box(80%, auto);
+            @include box(auto, auto);
             padding: 10px 0px;
             border-bottom: $borderSolidPrimary $borderColorPrimary;
         }
@@ -44,7 +47,7 @@
             @include flex(center, center, column);
             @include box(100%, auto);
             padding: 10px 0px;
-            &:hover{
+            &:hover, &:active{
                 background-color: rgba(255, 226, 21, 0.5);
             }
         }
