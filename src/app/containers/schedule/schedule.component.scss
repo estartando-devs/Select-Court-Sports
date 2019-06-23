@@ -7,7 +7,9 @@
     .schduleHeader{
         @include flex(center, center, row);
         @include box($maxWidthPrimary, auto);
-        margin: 54px 0px 60px 0px;    
+        margin: 0px 0px 3px 0px;
+        padding: 50px 0px 30px 0px;
+        border-bottom: solid 1px #144807;
         #whiteBack{
             position: absolute;
             left: 0;
@@ -15,6 +17,19 @@
         }
         h2{
             @include text($fontColorPrimary, none, normal, Raleway, 600, 22px);
+        }
+    }
+    .daysWeek{
+        @extend %listStyle;
+        @include box($maxWidthPrimary, auto);
+        @include flex(center, center, row);
+        @include theme($bgColorQuaternary,none, 0);
+        li{
+            @include flex(center, center, row);
+            @include text($fontColorPrimary, none, normal, Raleway, 500, 13px);
+            p{
+                padding: 8px;
+            }
         }
     }
 }

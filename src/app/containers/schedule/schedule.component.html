@@ -3,4 +3,7 @@
     <img id="whiteBack" src="../../../assets/img/whiteBack.png" alt="back" (click)="back()">
     <h2>{{lang.DO_SCHEDULES}}</h2>
   </div>
+<ul class="daysWeek">
+    <li *ngFor="let item of lang.DAYS" >{{item}} <p>|</p></li>
+  </ul>
 </section>

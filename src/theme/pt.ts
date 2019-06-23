@@ -24,7 +24,17 @@ export const LANG = {
     HEART_TEAM: "Qual seu time do coração?",
     NEW_ACOUNT: "Para criar uma nova conta, preencha os campos abaixo:",
     PRESENTATION: "Uma nova experiência na pelada com os amigos",
-    DO_SCHEDULES: "Faça seu agendamento"
+    DO_SCHEDULES: "Faça seu agendamento",
+
+    DAYS :[
+        "Dom", 
+        "Seg",
+        "Ter",
+        "Qua",
+        "Qui",
+        "Sex",
+        "Sáb"
+    ]
 }
 export const MENU = {
     WELCOME: "Bem vindo",
