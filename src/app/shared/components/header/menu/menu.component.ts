@@ -49,23 +49,39 @@ export class MenuComponent implements OnInit {
         {
           option: MENU.HOME,
           action: () => this.goTo(MENU.HROUTER),
+          route: MENU.HROUTER,
+          active: true
         },
         {
           option: MENU.CONTACT,
           action: () => this.goTo(MENU.CROUTER),
+          route: MENU.CROUTER,
 
         }
       ]
       isLogged ? this.options.push({
         option: MENU.SCHEDULING,
-        action: () => this.goTo(MENU.SROUTER)
+        action: () => this.goTo(MENU.SROUTER),
+        route: MENU.SROUTER
       },{
         option: MENU.LOGOUT,
         action: () => this.logout()
       }) : this.options.push({
         option: MENU.LOGIN,
-        action: () => this.goTo(MENU.LROUTER)
+        action: () => this.goTo(MENU.LROUTER),
+        route: MENU.LROUTER
       })
+    })
+
+    this.router.events.subscribe(route=>{
+      const active = route["url"]
+      this.options = this.options.map(item=>{
+        if(item.route == active)
+        return {...item, active: true}
+
+        return {...item, active: false}
+       })
+      console.log("ROUTER STATE --> ", this.options)
     })
   }
 

@@ -35,7 +35,7 @@ export const MENU = {
     WELCOME: "Bem vindo",
 
     HOME: "Home",
-    HROUTER: "/home",
+    HROUTER: "/",
 
     LOGIN: "Fazer Login",
     LROUTER: "/login",
