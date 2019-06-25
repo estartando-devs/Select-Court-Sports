@@ -1,5 +1,5 @@
 @import '../../../styles.scss';
-
+p{color:white}
 .schduleContainer{
     @include flex(flex-start, center, column);
     @include box($maxWidthPrimary, $maxHeightPrimary);
@@ -13,7 +13,7 @@
         #whiteBack{
             position: absolute;
             left: 0;
-            margin: 0px 0px 0px 23px;        
+            margin: 0px 0px 0px 23px;
         }
         h2{
             @include text($fontColorPrimary, none, normal, Raleway, 600, 22px);
@@ -36,6 +36,9 @@
                     padding: 12px;
                 }
             }
+        }
+        .iconTurn{
+          filter: hue-rotate(320deg) brightness(.5)
         }
         .daysWeek{
             @extend %listStyle;
