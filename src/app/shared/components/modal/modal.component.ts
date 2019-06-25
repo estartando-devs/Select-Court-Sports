@@ -12,11 +12,11 @@ export class ModalComponent implements OnInit {
   @Input() type: string;
 
   constructor(private modalService: ModalService, private router: Router) {}
-  
+
   toggleModal(){
     this.modalService.toggleModal()
   }
-  
+
   ngOnInit() {
     this.modalService.openModal.subscribe(status => {
       this.open = status;

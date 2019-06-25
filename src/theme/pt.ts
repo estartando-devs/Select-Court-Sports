@@ -28,8 +28,25 @@ export const LANG = {
     WHAT_YOU_WANNA_DO: "O que deseja fazer agora?",
     CONGRATULATIONS: "Parabéns!",
     MY_COURT_TEAM: "Agora você faz parte do time Minha Quadra.",
-    MENSAGE_SENDED: "Mensagem enviada com sucesso!"
+    MENSAGE_SENDED: "Mensagem enviada com sucesso!",
 
+    DO_SCHEDULES: "Faça seu agendamento",
+
+    DAYS :[
+        "Dom",
+        "Seg",
+        "Ter",
+        "Qua",
+        "Qui",
+        "Sex",
+        "Sáb"
+    ],
+
+    tHeadSchedule :[
+        "Horário",
+        "Valor",
+        "Status"
+    ]
 }
 export const MENU = {
     WELCOME: "Bem vindo",
@@ -44,7 +61,7 @@ export const MENU = {
     LOGOUT_ROUTER: "/",
 
     SCHEDULING: "Fazer agendamento",
-    SROUTER: "",
+    SROUTER: "/schedule",
 
     SCHEDULE: "Agendar",
     SCHROUTER: "/",

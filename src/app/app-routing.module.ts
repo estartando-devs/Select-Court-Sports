@@ -7,17 +7,21 @@ import { LoginModule } from './containers/login/login.module';
 import { AuthGuardService } from './core/guard/auth-guard.service';
 import { AuthGuardReverseService } from './core/guard/auth-guard-reverse.service';
 import { ContactComponent } from './containers/contact/contact.component';
+import { ScheduleComponent } from './containers/schedule/schedule.component';
+import { ScheduleModule } from './containers/schedule/schedule.module';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
   {path: "login", canActivate: [AuthGuardReverseService],loadChildren: () => import('./containers/login/login.module').then(mod => mod.LoginModule)},
   {path:"home",component: HomeComponent},
   {path: "test-service", component: CourtsComponent, canActivate: [AuthGuardService]},
-  {path: "contact", component: ContactComponent}
+  {path: "contact", component: ContactComponent},
+  {path: "schedule", component: ScheduleComponent}
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),
+  ScheduleModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
