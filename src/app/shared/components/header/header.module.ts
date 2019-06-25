@@ -7,8 +7,7 @@ import { ScheduleComponent } from 'src/app/containers/schedule/schedule.componen
 @NgModule({
   declarations: [
     HeaderComponent,
-    MenuComponent,
-    ScheduleComponent
+    MenuComponent
   ],
   imports: [CommonModule],
   exports: [HeaderComponent]
