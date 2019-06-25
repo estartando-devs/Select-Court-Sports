@@ -19,16 +19,35 @@
             @include text($fontColorPrimary, none, normal, Raleway, 600, 22px);
         }
     }
-    .daysWeek{
-        @extend %listStyle;
-        @include box($maxWidthPrimary, auto);
-        @include flex(center, center, row);
-        @include theme($bgColorQuaternary,none, 0);
-        li{
+    .scheduleNav{
+        div{
+            @include flex(space-between, center, row);
+            div{
+                @include flex(space-between, center, row);
+                @include text($fontColorPrimary, none, normal, Raleway, 500, 18px);
+                p{
+                    padding: 12px;
+                }
+            }
+            ul{
+                @extend %listStyle;
+                @include flex(space-between, center, row);
+                li{
+                    padding: 12px;
+                }
+            }
+        }
+        .daysWeek{
+            @extend %listStyle;
+            @include box($maxWidthPrimary, auto);
             @include flex(center, center, row);
-            @include text($fontColorPrimary, none, normal, Raleway, 500, 13px);
-            p{
-                padding: 8px;
+            @include theme($bgColorQuaternary,none, 0);
+            li{
+                @include flex(center, center, row);
+                @include text($fontColorPrimary, none, normal, Raleway, 500, 13px);
+                p{
+                    padding: 8px;
+                }
             }
         }
     }

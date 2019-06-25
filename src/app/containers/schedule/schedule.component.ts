@@ -9,6 +9,7 @@ import { LANG } from 'src/theme/pt';
 export class ScheduleComponent implements OnInit {
 
   public lang = LANG
+  public mouth = "Maio"
 
   constructor() { }
 

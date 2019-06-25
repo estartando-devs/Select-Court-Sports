@@ -3,7 +3,21 @@
     <img id="whiteBack" src="../../../assets/img/whiteBack.png" alt="back" (click)="back()">
     <h2>{{lang.DO_SCHEDULES}}</h2>
   </div>
-<ul class="daysWeek">
-    <li *ngFor="let item of lang.DAYS" >{{item}} <p>|</p></li>
-  </ul>
+  <div class="scheduleNav">
+    <div class="" >
+      <div>
+        <p>{{mouth}}</p>
+        <img  src="../../../assets/img/Arrow.png" alt=""> 
+      </div>
+      
+      <ul>
+        <li><img src="../../../assets/img/sun.svg" alt=""></li>
+        <li><img src="../../../assets/img/evening.svg" alt=""></li>
+        <li><img src="../../../assets/img/turn-night.svg" alt=""></li>
+      </ul>
+    </div>
+    <ul class="daysWeek">
+      <li *ngFor="let item of lang.DAYS" >{{item}} <p>|</p></li>
+    </ul>
+  </div>
 </section>
