@@ -1,0 +1,27 @@
+@import '../../../../styles.scss';
+.tableContainer{
+    // @include flex(center, center, row);
+    border-spacing: 0;
+    @include box($maxWidthPrimary, auto);
+    .thead{
+        th{
+            @include text($fontColorPrimary, none, normal, Raleway, 500, 14px);
+            padding: 13px 0px;            
+            &:not(:nth-child(3)){
+                border-right:  1px solid #144807;
+            }
+        }
+        
+    }
+    .tbody{
+        @include box($maxWidthPrimary, auto);
+        &:nth-child(2n+1) {
+            background: $bgColorQuinary;
+        }
+        td{
+            @include flex(center, center, row);
+            @include text($fontColorPrimary, none, normal, Raleway, 500, 12px);
+            padding: 13px 0px;
+        }   
+    }
+}

@@ -34,6 +34,12 @@ export const LANG = {
         "Qui",
         "Sex",
         "Sáb"
+    ],
+
+    tHeadSchedule :[
+        "Horário",
+        "Valor",
+        "Status"
     ]
 }
 export const MENU = {

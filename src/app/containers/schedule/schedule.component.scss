@@ -37,18 +37,6 @@
                 }
             }
         }
-        .daysWeek{
-            @extend %listStyle;
-            @include box($maxWidthPrimary, auto);
-            @include flex(center, center, row);
-            @include theme($bgColorQuaternary,none, 0);
-            li{
-                @include flex(center, center, row);
-                @include text($fontColorPrimary, none, normal, Raleway, 500, 13px);
-                p{
-                    padding: 8px;
-                }
-            }
-        }
+        
     }
 }
