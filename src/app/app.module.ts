@@ -20,7 +20,6 @@ import { AuthGuardService } from './core/guard/auth-guard.service';
 import { HeaderModule } from './shared/components/header/header.module';
 import { CalendarComponent } from './shared/components/calendar/calendar.component';
 import { ContactModule } from './containers/contact/contact.module';
-import { ScheduleModule } from './containers/schedule/schedule.module';
 
 @NgModule({
   declarations: [
@@ -39,8 +38,7 @@ import { ScheduleModule } from './containers/schedule/schedule.module';
     HeaderModule,
     CourtsModule,
     ReactiveFormsModule,
-    ContactModule,
-    ScheduleModule
+    ContactModule
   ],
   providers: [AuthService, AngularFireAuth, AuthGuardService],
   bootstrap: [AppComponent]

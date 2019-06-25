@@ -4,16 +4,16 @@
     <h2>{{lang.DO_SCHEDULES}}</h2>
   </div>
   <div class="scheduleNav">
-    <div class="" >
+    <div class="">
       <div>
         <p>{{mouth}}</p>
-        <img  src="../../../assets/img/Arrow.png" alt=""> 
+        <img src="../../../assets/img/Arrow.png" alt="">
       </div>
-      
+
       <ul>
-        <li><img src="../../../assets/img/sun.svg" alt=""></li>
-        <li><img src="../../../assets/img/evening.svg" alt=""></li>
-        <li><img src="../../../assets/img/turn-night.svg" alt=""></li>
+        <li><img (click)="setTurn('morning')" class="iconTurn" src="../../../assets/img/sun.svg" alt=""></li>
+        <li><img (click)="setTurn('evening')" src="../../../assets/img/evening.svg" alt=""></li>
+        <li><img (click)="setTurn('night')" src="../../../assets/img/turn-night.svg" alt=""></li>
       </ul>
     </div>
     <app-week></app-week>
