@@ -3,4 +3,5 @@ export class Court {
     adress: string = '';
     // price per hour ?
     price: number = 0;
+    pictures: Array<string>
 }

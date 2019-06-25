@@ -15,13 +15,20 @@ export class ButtonComponent implements OnInit {
   @Input() class: any
   @Input() color: string = ""
   @Input() bgColor: string = ""
+  @Input() margin: string
+  @Input() width: string
+  @Input() height: string
 
   constructor() { }
 
   getStyle(){
     return {
       ...this.style,
-      'color': this.color}
+      'color': this.color,
+      'margin': this.margin,
+      'width': this.width,
+      'height': this.height
+    }
   }
 
   ngOnInit() {

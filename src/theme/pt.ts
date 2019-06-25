@@ -9,7 +9,6 @@ export const LANG = {
     PH_ADRESS: "Endereço",
     PH_GENRE: "Genero",
 
-
     // BUTTON
     SIGN_IN: "Entrar",
     CREATE_ACCOUNT: "Criar conta",
@@ -24,10 +23,17 @@ export const LANG = {
     HEART_TEAM: "Qual seu time do coração?",
     NEW_ACOUNT: "Para criar uma nova conta, preencha os campos abaixo:",
     PRESENTATION: "Uma nova experiência na pelada com os amigos",
+
+    // MODALS
+    WHAT_YOU_WANNA_DO: "O que deseja fazer agora?",
+    CONGRATULATIONS: "Parabéns!",
+    MY_COURT_TEAM: "Agora você faz parte do time Minha Quadra.",
+    MENSAGE_SENDED: "Mensagem enviada com sucesso!",
+
     DO_SCHEDULES: "Faça seu agendamento",
 
     DAYS :[
-        "Dom", 
+        "Dom",
         "Seg",
         "Ter",
         "Qua",
@@ -46,7 +52,7 @@ export const MENU = {
     WELCOME: "Bem vindo",
 
     HOME: "Home",
-    HROUTER: "/home",
+    HROUTER: "/",
 
     LOGIN: "Fazer Login",
     LROUTER: "/login",
@@ -62,6 +68,18 @@ export const MENU = {
 
     CONTACT: "Contato",
     CROUTER: "/contact"
+}
 
-
+export const MODELS = {
+  SCHEDULE : {
+    availabel: "Disponível",
+    requested: "Solicitado",
+    canceled: "Cancelado"
+  },
+  PAYMENT_METHOD: {
+    cash: "Dinheiro",
+    credit: "Crédito",
+    debit: "Débito",
+    reserver: "Reservado"
+  }
 }

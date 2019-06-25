@@ -7,7 +7,7 @@ import { ScheduleComponent } from './schedule.component';
 @NgModule({
   declarations: [
     ScheduleComponent,
-    WeekComponent, 
+    WeekComponent,
     ListComponent
   ],
   imports: [
