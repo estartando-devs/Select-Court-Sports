@@ -8,7 +8,6 @@ import { AuthGuardService } from './core/guard/auth-guard.service';
 import { AuthGuardReverseService } from './core/guard/auth-guard-reverse.service';
 import { ContactComponent } from './containers/contact/contact.component';
 import { ScheduleComponent } from './containers/schedule/schedule.component';
-import { ScheduleModule } from './containers/schedule/schedule.module';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -20,8 +19,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),
-  ScheduleModule],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
