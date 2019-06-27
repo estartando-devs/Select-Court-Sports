@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { LANG } from 'src/theme/pt';
 import { ScheduleService } from './schedule.service';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Filter, Turn } from './schedule.model';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-schedule',
@@ -14,22 +15,20 @@ export class ScheduleComponent implements OnInit {
   public lang = LANG
   public mouth = "Maio"
 
-  public filter = new Filter()
-  public turn = new Turn()
+  public filter: Observable<Filter>
+  public turn: Observable<Turn>
 
   constructor(private scheduleService: ScheduleService) {
-    scheduleService.filter.subscribe(filter => {
-      this.filter = filter
-      this.turn = filter.turn
-    })
+    this.filter = scheduleService.filter
+    this.turn = scheduleService.turn
   }
 
   setTurn(key){
-    const currentValue = this.scheduleService.getCurrentState()["turn"][key]
+    const currentValue = this.scheduleService.turn.getValue()[key]
     console.log(currentValue)
     const turn = {}
     turn[key] = !currentValue
-    this.scheduleService.setState("turn", turn)
+    this.scheduleService.setState(this.turn, turn)
   }
 
   back(){

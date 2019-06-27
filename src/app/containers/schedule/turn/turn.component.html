@@ -1,0 +1,5 @@
+<ul>
+    <li><img (click)="handle('morning')" [ngClass]="{iconTurn: !(turn | async).morning}" src="../../../assets/img/sun.svg" alt=""></li>
+    <li><img (click)="handle('evening')" [ngClass]="{iconTurn: !(turn | async).evening}" src="../../../assets/img/evening.svg" alt=""></li>
+    <li><img (click)="handle('night')" [ngClass]="{iconTurn: !(turn | async).night}" src="../../../assets/img/turn-night.svg" alt=""></li>
+  </ul>

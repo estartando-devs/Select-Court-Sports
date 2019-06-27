@@ -1,4 +1,6 @@
 <section class="schduleContainer">
+    <!-- <app-header></app-header> -->
+
   <div class="schduleHeader">
     <img id="whiteBack" src="../../../assets/img/whiteBack.png" alt="back" (click)="back()">
     <h2>{{lang.DO_SCHEDULES}}</h2>
@@ -10,11 +12,7 @@
         <img src="../../../assets/img/Arrow.png" alt="">
       </div>
 
-      <ul>
-        <li><img (click)="setTurn('morning')" class="iconTurn" src="../../../assets/img/sun.svg" alt=""></li>
-        <li><img (click)="setTurn('evening')" src="../../../assets/img/evening.svg" alt=""></li>
-        <li><img (click)="setTurn('night')" src="../../../assets/img/turn-night.svg" alt=""></li>
-      </ul>
+      <app-turn (setTurn)="setTurn($event)" [turn]="turn"></app-turn>
     </div>
     <app-week></app-week>
   </div>

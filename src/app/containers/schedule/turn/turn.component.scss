@@ -1,0 +1,13 @@
+@import '../../../../styles.scss';
+
+.iconTurn{
+  filter: brightness(50%);
+}
+
+ul{
+  @extend %listStyle;
+  @include flex(space-between, center, row);
+  li{
+      padding: 12px;
+  }
+}
