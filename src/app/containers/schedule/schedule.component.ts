@@ -4,6 +4,7 @@ import { ScheduleService } from './schedule.service';
 import { Observable, of } from 'rxjs';
 import { Filter, Turn } from './schedule.model';
 import { switchMap } from 'rxjs/operators';
+import { ModalService } from 'src/app/shared/components/modal/modal.service';
 
 @Component({
   selector: 'app-schedule',
@@ -18,7 +19,7 @@ export class ScheduleComponent implements OnInit {
   public filter: Observable<Filter>
   public turn: Observable<Turn>
 
-  constructor(private scheduleService: ScheduleService) {
+  constructor(private scheduleService: ScheduleService, private modalService: ModalService) {
     this.filter = scheduleService.filter
     this.turn = scheduleService.turn
   }
@@ -34,6 +35,11 @@ export class ScheduleComponent implements OnInit {
   back(){
     window.history.back();
   }
+
+  toggleModal(){
+    this.modalService.toggleModal();
+    // console.log("abriu")
+  } 
 
   ngOnInit() {
   }

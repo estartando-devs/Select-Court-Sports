@@ -1,21 +1,20 @@
 @import '../../../../styles.scss';
 .tableContainer{
-    // @include flex(center, center, row);
     border-spacing: 0;
     @include box($maxWidthPrimary, auto);
     .thead{
         th{
+            border-bottom:  $borderSolidPrimary $borderColorPrimary;
             @include text($fontColorPrimary, none, normal, Raleway, 500, 14px);
             padding: 13px 0px;            
             &:not(:nth-child(3)){
-                border-right:  1px solid #144807;
+                border-right:  $borderSolidPrimary $borderColorSecondary;
             }
         }
-        
     }
     .tbody{
         @include box($maxWidthPrimary, auto);
-        &:nth-child(2n+1) {
+        &:nth-child(2n+0) {
             background: $bgColorQuinary;
         }
         td{
