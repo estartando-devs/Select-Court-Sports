@@ -14,7 +14,7 @@ import { ModalService } from 'src/app/shared/components/modal/modal.service';
 export class ScheduleComponent implements OnInit {
 
   public lang = LANG
-  public mouth = "Maio"
+  public month = "Maio"
 
   public filter: Observable<Filter>
   public turn: Observable<Turn>

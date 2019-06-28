@@ -7,10 +7,9 @@
   <div class="scheduleNav">
     <div class="">
       <div (click)="toggleModal()">
-        <p >{{mouth}}</p>
+        <p >{{month}}</p>
         <img src="../../../assets/img/Arrow.png" alt="">
       </div>
-
       <app-turn (setTurn)="setTurn($event)" [turn]="turn"></app-turn>
     </div>
     <app-week></app-week>
