@@ -7,8 +7,7 @@ import { AuthService } from './core/auth/auth.service';
 })
 export class AppComponent implements OnInit{
   title = 'select-court-sports';
-
-  constructor(public auth: AuthService) {}
+  constructor(public auth: AuthService ) {}
 
   ngOnInit(){
   }
