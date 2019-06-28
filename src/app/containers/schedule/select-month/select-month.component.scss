@@ -1,1 +1,23 @@
 @import "../../../../styles.scss";
+.montContainer{
+    @include box($maxWidthPrimary, $maxHeightPrimary);
+    .monthHead{
+        @include box($maxWidthPrimary, auto);
+        @include text($fontColorPrimary, none, normal, Raleway, 500, 20px);
+        padding: 90px 0px;
+    }
+    .monthBody{
+        @include box($maxWidthPrimary, auto);
+        @include flex(center, center, row);
+        flex-wrap: wrap;
+        p{
+            @include box(33vw, auto);
+            @include text($fontColorPrimary, underline, normal, Raleway, 500, 14px);
+            margin-bottom: 60px;
+        }
+    }
+}
+
+*{
+    color: $fontColorPrimary;
+}
