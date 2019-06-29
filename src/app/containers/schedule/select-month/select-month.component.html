@@ -1,6 +1,6 @@
 <div class="montContainer" (click)="toggleModal()">
   <div class="monthHead">
-    <h1>2019</h1>
+    <h1>{{year}}</h1>
   </div>
   <div class="monthBody">
     <button *ngFor="let month of months; let i = index" (click)="handle(i)">{{month}}</button>

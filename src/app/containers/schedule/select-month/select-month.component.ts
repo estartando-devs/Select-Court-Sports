@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ModalService } from 'src/app/shared/components/modal/modal.service';
-import { MONTHS } from '../../../../helpers/date'
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-select-month',
@@ -9,11 +9,16 @@ import { MONTHS } from '../../../../helpers/date'
 })
 export class SelectMonthComponent implements OnInit {
 
+  public year: any
+  public months: any
+
   @Output() setMonth = new EventEmitter()
 
   constructor(private modalService: ModalService) { }
 
   ngOnInit() {
+    this.year = moment().year()
+    this.months = moment.months()
   }
 
   handle(index){
@@ -23,6 +28,4 @@ export class SelectMonthComponent implements OnInit {
   toggleModal(){
     this.modalService.toggleModal();
   }
-
-  public months = MONTHS
 }
