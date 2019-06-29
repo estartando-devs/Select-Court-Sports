@@ -9,6 +9,7 @@ import { deepClone } from 'lodash';
 export class ScheduleService {
   public filter = new BehaviorSubject<Filter>(new Filter())
   public turn = new BehaviorSubject<Turn>(new Turn())
+  public date = new BehaviorSubject<Date>(new Date())
 
   setState = (_state, _data, _key ?: string) => {
     console.log(_state, _data, _key)
