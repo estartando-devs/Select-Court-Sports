@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ModalService } from 'src/app/shared/components/modal/modal.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-select-month',
@@ -7,22 +8,24 @@ import { ModalService } from 'src/app/shared/components/modal/modal.service';
   styleUrls: ['./select-month.component.scss']
 })
 export class SelectMonthComponent implements OnInit {
+  
+  public year: any
+  public months: any
 
-  constructor(private modalService: ModalService) { }
+  constructor(private modalService: ModalService) {
+  }
 
   ngOnInit() {
+    this.year = moment().year()
+    this.months = moment.months()
   }
 
   toggleModal(){
     this.modalService.toggleModal();
   } 
 
-  public months = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f"
-  ]
+  data(value){
+    console.log(value)
+  }
+ 
 }

@@ -1,8 +1,8 @@
 <div class="montContainer" (click)="toggleModal()">
   <div class="monthHead">
-    <h1>2019</h1>
+    <h1>{{year}}</h1>
   </div>
   <div class="monthBody">
-    <p *ngFor="let month of months">{{month}}</p>
+    <p *ngFor="let month of months" (click)="data($event)">{{month}}</p>
   </div>
 </div>
