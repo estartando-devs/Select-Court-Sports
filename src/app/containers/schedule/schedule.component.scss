@@ -20,7 +20,6 @@ p{color:white}
         }
     }
     .scheduleNav{
-
         div{
             @include flex(space-between, center, row);
             div{
@@ -31,6 +30,5 @@ p{color:white}
                 }
             }
         }
-
     }
 }

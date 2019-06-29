@@ -1,20 +1,22 @@
 <section class="schduleContainer">
     <!-- <app-header></app-header> -->
-
   <div class="schduleHeader">
     <img id="whiteBack" src="../../../assets/img/whiteBack.png" alt="back" (click)="back()">
     <h2>{{lang.DO_SCHEDULES}}</h2>
   </div>
   <div class="scheduleNav">
     <div class="">
-      <div>
-        <p>{{mouth}}</p>
+      <div (click)="toggleModal()">
+        <p >{{month}}</p>
         <img src="../../../assets/img/Arrow.png" alt="">
       </div>
-
       <app-turn (setTurn)="setTurn($event)" [turn]="turn"></app-turn>
     </div>
     <app-week></app-week>
   </div>
   <app-list></app-list>
 </section>
+
+<app-modal>
+  <app-select-month (setMonth)="setMonth($event)"></app-select-month>
+</app-modal>
