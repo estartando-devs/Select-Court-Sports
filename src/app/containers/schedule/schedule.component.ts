@@ -22,10 +22,12 @@ export class ScheduleComponent implements OnInit {
 
   public filter: Observable<Filter>
   public turn: Observable<Turn>
+  public date: Observable<Date>
 
   constructor(private scheduleService: ScheduleService, private modalService: ModalService) {
     this.filter = scheduleService.filter
     this.turn = scheduleService.turn
+    this.date = this.scheduleService.date
     this.scheduleService.date.subscribe(date=>{
       this.month = monthByNumber(date.getMonth())
       console.log("DATA ATUAL --> ", date)
@@ -34,16 +36,27 @@ export class ScheduleComponent implements OnInit {
 
   setTurn(key){
     const currentValue = this.scheduleService.turn.getValue()[key]
-    console.log(currentValue)
     const turn = {}
     turn[key] = !currentValue
     this.scheduleService.setState(this.turn, turn)
   }
 
   setMonth(index){
-    console.log(index)
     let current = this.scheduleService.date.getValue()
     current = moment(current).month(index).toDate()
+    this.scheduleService.date.next(current)
+  }
+
+  setWeekDay(_weekDay){
+    let current = this.scheduleService.date.getValue()
+    current = moment(current).date(_weekDay).toDate()
+    this.scheduleService.date.next(current)
+  }
+
+  setWeek(_week){
+    console.log(_week)
+    let current = this.scheduleService.date.getValue()
+    current = moment(current).week(_week).toDate()
     this.scheduleService.date.next(current)
   }
 
