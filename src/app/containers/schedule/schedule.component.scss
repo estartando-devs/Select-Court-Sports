@@ -1,5 +1,4 @@
 @import '../../../styles.scss';
-p{color:white}
 .schduleContainer{
     @include flex(flex-start, center, column);
     @include box($maxWidthPrimary, $maxHeightPrimary);
@@ -9,7 +8,7 @@ p{color:white}
         @include box($maxWidthPrimary, auto);
         margin: 0px 0px 3px 0px;
         padding: 50px 0px 30px 0px;
-        border-bottom: solid 1px #144807;
+        border-bottom: $borderSolidPrimary $borderColorSecondary;
         #whiteBack{
             position: absolute;
             left: 0;
@@ -27,6 +26,9 @@ p{color:white}
                 @include text($fontColorPrimary, none, normal, Raleway, 500, 18px);
                 p{
                     padding: 12px;
+                }
+                img{
+                    width: 13px;
                 }
             }
         }
