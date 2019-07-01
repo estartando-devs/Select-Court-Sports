@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: "test-service", component: CourtsComponent, canActivate: [AuthGuardService]},
   {path: "contact", component: ContactComponent},
   {path: "schedule", component: ScheduleComponent},
-  {path: "day", component: WeekDayComponent}
+  // {path: "day", component: WeekDayComponent}
 ]
 
 @NgModule({
