@@ -18,6 +18,7 @@ export class ButtonComponent implements OnInit {
   @Input() margin: string
   @Input() width: string
   @Input() height: string
+  @Input() fontSize: string;
 
   constructor() { }
 
@@ -27,7 +28,8 @@ export class ButtonComponent implements OnInit {
       'color': this.color,
       'margin': this.margin,
       'width': this.width,
-      'height': this.height
+      'height': this.height,
+      'font-size': this.fontSize
     }
   }
 
