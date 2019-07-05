@@ -64,11 +64,13 @@ export class MenuComponent implements OnInit {
 
         }
       ]
-      isLogged ? this.options.push({
-        option: MENU.SCHEDULING,
-        action: () => this.goTo(MENU.SROUTER),
-        route: MENU.SROUTER
-      },{
+      isLogged ? this.options.push(
+        {
+        option: MENU.MYHOURS,
+        action: () => this.goTo(MENU.MHROUTER),
+        route: MENU.MHROUTER
+      },
+      {
         option: MENU.LOGOUT,
         action: () => this.logout()
       }) : this.options.push({

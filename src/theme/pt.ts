@@ -63,6 +63,9 @@ export const MENU = {
     SCHEDULING: "Fazer agendamento",
     SROUTER: "/schedule",
 
+    MYHOURS: "Meus Horários",
+    MHROUTER: "/myhours",
+
     SCHEDULE: "Agendar",
     SCHROUTER: "/",
 
