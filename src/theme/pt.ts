@@ -46,6 +46,12 @@ export const LANG = {
         "Horário",
         "Valor",
         "Status"
+    ],
+
+    tHeadListHours :[
+        "Dia",
+        "Valor",
+        "Status"
     ]
 }
 export const MENU = {

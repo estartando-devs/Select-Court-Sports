@@ -22,3 +22,17 @@
     background-position: center;
     background-size: cover;
 }
+%borderSpacingNone{
+    border-spacing: 0;
+}
+%textAlignCenter{
+    text-align: center;
+}
+
+// PADDING TABLE
+%paddingTablePrimary{
+    padding: 13px 0px;
+}
+%paddingTableSecondary{
+    padding: 26px 0px;
+}

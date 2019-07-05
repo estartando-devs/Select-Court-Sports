@@ -1,3 +1,10 @@
-<p>
-  list-my-hours works!
-</p>
+<table class="tableContainer">
+  <tr class="thead">
+    <th *ngFor= "let item of lang.tHeadListHours">{{item}}</th>
+  </tr>
+  <tr class="tbody" *ngFor="let item of myHours">
+    <td >{{item.date}}</td>
+    <td >{{item.value}}</td>
+    <td >{{item.status}}</td>
+  </tr>
+</table>
