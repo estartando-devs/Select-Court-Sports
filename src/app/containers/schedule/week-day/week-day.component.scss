@@ -14,7 +14,7 @@
             background-color: $borderColorSecondary;
         }
         &:nth-child(4){
-            background-color: $borderColorTertiary;
+            background-color: $borderColorQuaternary;
 
         }
     }
@@ -33,6 +33,6 @@
     background-color: $borderColorSecondary;
 }
 .selected{
-    background-color: $borderColorTertiary;
+    background-color: $borderColorQuaternary;
 
 }
