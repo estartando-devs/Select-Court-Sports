@@ -25,7 +25,7 @@ import { ContactModule } from './containers/contact/contact.module';
   declarations: [
     AppComponent,
     HomeComponent,
-    CalendarComponent
+    CalendarComponent,
   ],
   imports: [
     BrowserModule,
