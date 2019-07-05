@@ -9,6 +9,7 @@ import { AuthGuardReverseService } from './core/guard/auth-guard-reverse.service
 import { ContactComponent } from './containers/contact/contact.component';
 import { ScheduleComponent } from './containers/schedule/schedule.component';
 import { ScheduleModule } from './containers/schedule/schedule.module';
+import { WeekDayComponent } from './containers/schedule/week-day/week-day.component';
 import { MyHoursModule } from './containers/my-hours/my-hours.module';
 import { MyHoursComponent } from './containers/my-hours/my-hours.component';
 
@@ -18,6 +19,8 @@ const routes: Routes = [
   {path:"home",component: HomeComponent},
   {path: "test-service", component: CourtsComponent, canActivate: [AuthGuardService]},
   {path: "contact", component: ContactComponent},
+  {path: "schedule", component: ScheduleComponent},
+  // {path: "day", component: WeekDayComponent}
   {path: "schedule", component: ScheduleComponent},
   {path: "myhours", component: MyHoursComponent}
 ]

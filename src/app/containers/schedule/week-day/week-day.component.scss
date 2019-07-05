@@ -1,0 +1,38 @@
+@import '../../../../styles.scss';
+
+.weekDayContainer{
+    @include box($maxWidthPrimary, auto);
+    @include flex(space-around, center, row);
+    overflow: scroll;
+    flex-wrap: nowrap;
+    .days{
+        @include theme(none, $borderSolidPrimary $borderColorSecondary, 50%);
+        @include text($fontColorPrimary, none, normal, Raleway, 500, 15px);
+        padding: 4px 9px;
+        margin: 30px 0px;
+        &:nth-child(3){
+            background-color: $borderColorSecondary;
+        }
+        &:nth-child(4){
+            background-color: $borderColorQuaternary;
+
+        }
+    }
+}
+#backDays{
+    transform: rotate(90deg);
+    width: 12px
+}
+#advanceDays{
+    transform: rotate(270deg);
+    width: 12px
+
+}
+
+.current{
+    background-color: $borderColorSecondary;
+}
+.selected{
+    background-color: $borderColorQuaternary;
+
+}

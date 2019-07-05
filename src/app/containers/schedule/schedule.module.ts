@@ -7,6 +7,7 @@ import { HeaderModule } from 'src/app/shared/components/header/header.module';
 import { TurnComponent } from './turn/turn.component';
 import { ModalModule } from 'src/app/shared/components/modal/modal.module';
 import { SelectMonthComponent } from './select-month/select-month.component';
+import { WeekDayComponent } from './week-day/week-day.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SelectMonthComponent } from './select-month/select-month.component';
     WeekComponent,
     ListComponent,
     TurnComponent,
-    SelectMonthComponent
+    SelectMonthComponent,
+    WeekDayComponent
   ],
   imports: [
     CommonModule,

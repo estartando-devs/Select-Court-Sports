@@ -13,6 +13,11 @@
       <app-turn (setTurn)="setTurn($event)" [turn]="turn"></app-turn>
     </div>
     <app-week></app-week>
+    <app-week-day
+      [$date]="date"
+      (setWeekDay)="setWeekDay($event)"
+      (setWeek)="setWeek($event)">
+    </app-week-day>
   </div>
   <app-list></app-list>
 </section>
