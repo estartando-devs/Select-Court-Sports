@@ -10,13 +10,12 @@
         @include text($fontColorPrimary, none, normal, Raleway, 500, 15px);
         padding: 4px 9px;
         margin: 30px 0px;
-        &:nth-child(3){
-            background-color: $borderColorSecondary;
-        }
-        &:nth-child(4){
-            background-color: $borderColorQuaternary;
-
-        }
+    }
+    .disabled{
+      background-color: $borderColorQuaternary;
+    }
+    .active{
+      background-color: $borderColorSecondary;
     }
 }
 #backDays{
