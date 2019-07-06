@@ -1,4 +1,4 @@
-@import '../../../styles.scss';
+@import 'src/styles';
 .schduleContainer{
     @include flex(flex-start, center, column);
     @include box($maxWidthPrimary, $maxHeightPrimary);

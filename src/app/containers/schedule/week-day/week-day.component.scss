@@ -1,5 +1,4 @@
-@import '../../../../styles.scss';
-
+@import 'src/styles';
 .weekDayContainer{
     @include box($maxWidthPrimary, auto);
     @include flex(space-around, center, row);

@@ -1,4 +1,4 @@
-@import '../../../../styles.scss';
+@import 'src/styles';
 .daysWeek{
     @extend %listStyle;
     @include box($maxWidthPrimary, auto);

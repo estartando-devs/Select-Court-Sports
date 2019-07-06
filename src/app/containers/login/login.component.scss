@@ -1,4 +1,4 @@
-@import '../../../styles.scss';
+@import 'src/styles';
 
 .loginContainer{
     @include flex(center, center, column);

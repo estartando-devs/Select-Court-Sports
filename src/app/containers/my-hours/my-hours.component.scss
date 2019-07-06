@@ -1,5 +1,4 @@
-@import '../../../styles.scss';
-
+@import 'src/styles';
 .myHoursContainer{
     .myHoursHeader{
         @include flex(center, center, row);

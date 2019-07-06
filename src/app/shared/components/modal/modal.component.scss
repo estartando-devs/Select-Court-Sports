@@ -1,5 +1,4 @@
-@import '../../../../styles.scss';
-
+@import 'src/styles';
 .modalContainer {
   @include flex(center, center, row);
   position: fixed;

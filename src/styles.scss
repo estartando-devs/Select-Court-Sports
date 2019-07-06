@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import './theme/extends.scss';
-@import './theme/mixins.scss';
-@import './theme/variables.scss';
-@import './theme/fonts.scss';
+@import 'theme/extends', 'theme/mixins', 'theme/variables', 'theme/fonts';
+// @import './theme/mixins.scss';
+// @import './theme/variables.scss';
+// @import './theme/fonts.scss';
 *{
     margin: 0;
     padding: 0;

@@ -1,4 +1,4 @@
-@import "../../../../styles.scss";
+@import 'src/styles';
 .montContainer{
     @include box($maxWidthPrimary, $maxHeightPrimary);
     .monthHead{

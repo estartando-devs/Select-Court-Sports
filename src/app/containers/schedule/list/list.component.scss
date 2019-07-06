@@ -1,4 +1,4 @@
-@import '../../../../styles.scss';
+@import 'src/styles';
 .tableContainer{
     border-spacing: 0;
     @include box($maxWidthPrimary, auto);
