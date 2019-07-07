@@ -10,8 +10,8 @@ export class DbService {
 
   constructor(private db: AngularFireDatabase) { }
 
-  add(object: any, list: string) {
-    this.db.list(list).push(object)
+  add(object: any, list: string): Promise<any> {
+    return this.db.list(list).push(object)
     .then((result: any) => {
       console.log(result.key);
     });

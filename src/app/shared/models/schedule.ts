@@ -1,7 +1,7 @@
 import { User } from './user';
 import { MODELS } from '../../../theme/pt'
 export class Schedule{
-  date: Date = new Date();
+  date: Date = new Date(); //23/05/2019 14:00:00
   checkIn: Boolean = false;
   isPaidOut: Boolean = false;
   paidOut: number = 0;

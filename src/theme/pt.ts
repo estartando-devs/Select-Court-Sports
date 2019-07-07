@@ -81,8 +81,9 @@ export const MENU = {
 
 export const MODELS = {
   SCHEDULE : {
+    confirmed: "Confirmado",
     availabel: "Disponível",
-    requested: "Solicitado",
+    requested: "No aguardo",
     canceled: "Cancelado"
   },
   PAYMENT_METHOD: {
