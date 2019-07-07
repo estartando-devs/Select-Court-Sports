@@ -15,11 +15,11 @@ export class InputComponent implements OnInit {
   @Input() id: string = "0";
   @Input() label: boolean = false;
   @Input() iconLabel: string;
-  @Input() placeholder: string = "";
-  @Input() bord: string = "";
-  @Input() borderbottom: string = "";
-  @Input() borderradius: string = "";
-
+  @Input() placeholder = "";
+  @Input() bord = "";
+  @Input() borderbottom = "";
+  @Input() borderradius = "";
+  @Input() formControlName = "formControlName";
   @Output() change = new EventEmitter()
 
   constructor() {}
