@@ -10,7 +10,7 @@
 %pointerCursor{
   cursor: pointer;
 }
-%listStyle{
+%listStyleNone{
     list-style: none;
 }
 %backgroundImage{
@@ -23,11 +23,24 @@
 %borderSpacingNone{
     border-spacing: 0;
 }
+%displayNone{
+    display: none;
+}
+
+// TEXT
 %textAlignCenter{
     text-align: center;
 }
+%textDecorationNone{
+    text-decoration: none;
+}
+
+// POSITION
 %positionAbsolute{
     position: absolute;
+}
+%positionFixed{
+    position: fixed;
 }
 
 // PADDING TABLE
@@ -37,3 +50,4 @@
 %paddingTableSecondary{
     padding: 26px 0px;
 }
+

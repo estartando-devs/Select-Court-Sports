@@ -3,7 +3,7 @@
     @include box($maxWidthPrimary, $maxHeightPrimary);
     .monthHead{
         @include box($maxWidthPrimary, auto);
-        @include text($fontColorPrimary, none, normal, Raleway, 0, 20px);
+        @include text($fontColorPrimary, none, normal, $fontPrimary, 0, 20px);
         padding: 90px 0px;
     }
     .monthBody{
@@ -12,12 +12,12 @@
         flex-wrap: wrap;
         button{
             @include box(33vw, auto);
-            @include text($fontColorPrimary, none, normal, Raleway, 500, 14px);
+            @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSmall, 14px);
             margin-bottom: 60px;
             background-color: transparent;
             border: none;
             &:not(:nth-child(3n+3)) {
-                border-right: $borderSolidPrimary $borderColorPrimary
+                border-right: $borderSolidSmall $borderColorPrimary
             }
         }
     }

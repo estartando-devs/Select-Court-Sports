@@ -8,14 +8,14 @@
         @include box($maxWidthPrimary, auto);
         margin: 0px 0px 3px 0px;
         padding: 50px 0px 30px 0px;
-        border-bottom: $borderSolidPrimary $borderColorSecondary;
+        border-bottom: $borderSolidSmall $borderColorSecondary;
         #whiteBack{
-            position: absolute;
+            @extend %positionAbsolute;
             left: 0;
             margin: 0px 0px 0px 23px;
         }
         h2{
-            @include text($fontColorPrimary, none, normal, Raleway, 600, 22px);
+            @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSmall, 22px);
         }
     }
     .scheduleNav{
@@ -23,7 +23,7 @@
             @include flex(space-between, center, row);
             div{
                 @include flex(space-between, center, row);
-                @include text($fontColorPrimary, none, normal, Raleway, 500, 18px);
+                @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSmall, 18px);
                 p{
                     padding: 12px;
                 }

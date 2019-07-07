@@ -18,8 +18,8 @@
 
 .btn{
   @include box($buttonBoxWidth, $buttonBoxHeigth);
-  @include text($fontColorPrimary, none, none, $fontPrimary, normal, $fontSizeQuaternary);
-  @include theme(none, none, $borderRadiusPrimary);
+  @include text($fontColorPrimary, none, none, $fontPrimary, normal, $buttonFontSmall);
+  @include theme(none, none, $borderRadiusSmall);
   @extend %pointerCursor;
   @extend %hiddenOverflow;
   margin: $marginPrimary;
@@ -37,7 +37,7 @@
 
 //BUTTON TYPES ------------------
 .clear{
-  @include theme(transparent, $borderSolidSeconary $buttonPrimary, none);
+  @include theme(transparent, $borderSolidRegular $buttonPrimary, none);
   color: $buttonPrimary;
   &:active{
     color: darken($color: $buttonPrimary, $amount: 5);

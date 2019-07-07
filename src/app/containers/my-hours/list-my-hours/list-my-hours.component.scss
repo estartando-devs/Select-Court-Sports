@@ -4,20 +4,20 @@
     .thead{
         th{
             @include box($maxWidthPrimary, auto);
-            @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSecondary, $fontSizeSenary);
+            @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSmall, $fontSizeSenary);
             @include theme($bgColorQuaternary, auto, 0);
             @extend %paddingTableSecondary;            
             &:not(:nth-child(3)){
-                border-right:  $borderSolidPrimary $borderColorTertiary;
+                border-right:  $borderSolidSmall $borderColorTertiary;
             }
         }
     }
     .tbody{
         td{
-            @include text($fontColorTertiary, none, none, $fontPrimary, $fontWeightSecondary, $fontSizeQuinary);
+            @include text($fontColorTertiary, none, none, $fontPrimary, $fontWeightSmall, $fontSizeQuinary);
             @extend %textAlignCenter;
             @extend %paddingTablePrimary;          
-            border-bottom: $borderSolidPrimary $bgColorQuinary;         
+            border-bottom: $borderSolidSmall $bgColorQuinary;         
         }
     }
 }

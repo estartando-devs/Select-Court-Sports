@@ -1,15 +1,15 @@
 @import 'src/styles';
 .tableContainer{
-    border-spacing: 0;
+    @extend %borderSpacingNone;
     @include box($maxWidthPrimary, auto);
     .thead{
         th{
-            border-bottom:  $borderSolidPrimary $borderColorPrimary;
-            @include text($fontColorPrimary, none, normal, Raleway, 500, 14px);
+            @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSmall, 14px);
+            border-bottom:  $borderSolidSmall $borderColorPrimary;
             padding: 13px 0px;     
             background: black;
             &:not(:nth-child(3)){
-                border-right:  $borderSolidPrimary $borderColorSecondary;
+                border-right:  $borderSolidSmall $borderColorSecondary;
             }
         }
     }
@@ -21,7 +21,7 @@
         }
         td{
             @include flex(center, center, row);
-            @include text($fontColorPrimary, none, normal, Raleway, 500, 12px);
+            @include text($fontColorPrimary, none, normal,$fontPrimary, $fontWeightSmall, 12px);
             padding: 13px 0px;
         }   
     }
