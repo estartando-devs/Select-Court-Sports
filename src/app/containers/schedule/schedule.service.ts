@@ -12,7 +12,7 @@ export class ScheduleService {
   public date = new BehaviorSubject<Date>(new Date())
 
   setState = (_state, _data, _key ?: string) => {
-    console.log(_state, _data, _key)
+    // console.log(_state, _data, _key)
     let state = _state.getValue()
     if(_key)
       state[_key] = {

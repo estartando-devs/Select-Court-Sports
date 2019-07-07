@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ContactComponent } from './contact.component';
 import { FormModule } from 'src/app/modules/form/form.module';
 import { ModalModule } from 'src/app/shared/components/modal/modal.module';
-// import { ContactRoutingModule } from './contact-routing.module';
+import { ContactRoutingModule } from './contact-routing.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,7 @@ import { ModalModule } from 'src/app/shared/components/modal/modal.module';
   ],
   imports: [
     CommonModule,
-    // ContactRoutingModule,
+    ContactRoutingModule,
     FormModule,
     ModalModule
   ],

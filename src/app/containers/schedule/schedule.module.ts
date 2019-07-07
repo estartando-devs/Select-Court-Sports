@@ -8,6 +8,7 @@ import { TurnComponent } from './turn/turn.component';
 import { ModalModule } from 'src/app/shared/components/modal/modal.module';
 import { SelectMonthComponent } from './select-month/select-month.component';
 import { WeekDayComponent } from './week-day/week-day.component';
+import { ScheduleRoutingModule } from './schedule-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,8 +21,9 @@ import { WeekDayComponent } from './week-day/week-day.component';
   ],
   imports: [
     CommonModule,
+    ScheduleRoutingModule,
     HeaderModule,
-    ModalModule
+    ModalModule,
   ]
 })
 export class ScheduleModule { }

@@ -19,7 +19,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthGuardService } from './core/guard/auth-guard.service';
 import { HeaderModule } from './shared/components/header/header.module';
 import { CalendarComponent } from './shared/components/calendar/calendar.component';
-import { ContactModule } from './containers/contact/contact.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +37,6 @@ import { ContactModule } from './containers/contact/contact.module';
     HeaderModule,
     CourtsModule,
     ReactiveFormsModule,
-    ContactModule
   ],
   providers: [AuthService, AngularFireAuth, AuthGuardService],
   bootstrap: [AppComponent]
