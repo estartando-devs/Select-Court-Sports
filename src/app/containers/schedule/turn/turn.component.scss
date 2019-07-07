@@ -4,7 +4,7 @@
 }
 
 ul{
-  @extend %listStyle;
+  @extend %listStyleNone;
   @include flex(space-between, center, row);
   li{
       padding: 12px;

@@ -3,7 +3,7 @@
 
 .box-input {
   @include flex(center, center, initial);
-  @include theme(transparent, $borderSolidPrimary, $inputBoxHeigth/2);
+  @include theme(transparent, $borderSolidSmall, $inputBoxHeigth/2);
   @include box($inputBoxWidth, $inputBoxHeigth);
   border-color: $borderColorPrimary;
   margin: $marginPrimary;
@@ -23,7 +23,7 @@
   .input {
     @include theme(transparent, none, 0);
     @include box($inputWidth, $inputHeigth);
-    @include text($fontColorSecondary, none, normal, $fontPrimary, $fontWeightSecondary, $fontSizeTertiary);
+    @include text($fontColorSecondary, none, normal, $fontPrimary, $fontWeightSmall, $fontSizeTertiary);
     padding: 5px 8px;
     &:focus{
         @extend %outLineNone;
@@ -31,22 +31,22 @@
 
     &::-webkit-input-placeholder {
       color: $fontColorSecondary;
-      font-weight: $fontWeightPrimary;
+      font-weight: $fontWeightRegular;
     }
 
     &:-moz-placeholder {
       color: $fontColorSecondary;
-      font-weight: $fontWeightPrimary;
+      font-weight: $fontWeightRegular;
     }
 
     &::-moz-placeholder {
       color: $fontColorSecondary;
-      font-weight: $fontWeightPrimary;
+      font-weight: $fontWeightRegular;
     }
 
     &:-ms-input-placeholder {
       color: $fontColorSecondary;
-      font-weight: $fontWeightPrimary;
+      font-weight: $fontWeightRegular;
     }
 
     &:-webkit-autofill,

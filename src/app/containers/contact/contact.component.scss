@@ -8,12 +8,12 @@
         @include box($maxWidthPrimary, auto);
         margin: 54px 0px 60px 0px;    
         #back{
-            position: absolute;
+            @extend %positionAbsolute;
             left: 0;
             margin: 0px 0px 0px 23px;            
         }
         h2{
-            @include text($fontColorQuaternary, none, normal, Raleway, 600, 22px);
+            @include text($fontColorQuaternary, none, normal, $fontPrimary, $fontWeightRegular, 22px);
         }
     }
     app-button{

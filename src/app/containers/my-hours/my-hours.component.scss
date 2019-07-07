@@ -10,7 +10,7 @@
             margin: 0px 0px 0px 23px;
         }
         h2{
-            @include text($fontColorQuinary, none, normal, $fontPrimary, $fontWeightPrimary, $fontSizeSeptenary);
+            @include text($fontColorQuinary, none, normal, $fontPrimary, $fontWeightRegular, $fontSizeSeptenary);
         }
 
     }

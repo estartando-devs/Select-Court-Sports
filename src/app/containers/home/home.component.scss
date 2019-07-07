@@ -4,7 +4,7 @@
     @include box($maxWidthPrimary, $maxHeightPrimary);
     @extend %backgroundImage;
     h1{
-        @include text($fontColorPrimary, none, normal, Raleway, 500, 35px);
+        @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSmall, 35px);
         width: 65vw;
         z-index: 3;
     }
@@ -13,18 +13,16 @@
         z-index: 3;
     }
     div{
-        @include theme(none, solid 2px #fff, 50%);
+        @include theme(none, $borderSolidRegular $borderColorTertiary, $borderRadiusLarge);
         @include flex(center, center, row);
-        width: auto;
         padding: 10px;
         z-index: 3;
     }
 }
 
 .overlay{
-    position: fixed;
+    @extend %positionFixed;
+    @include box($maxWidthPrimary, $maxHeightPrimary);
     top:0;
-    height: 100vh;
-    width: 100vw;
     background-color: rgba(0, 0, 0, 0.75);
 }

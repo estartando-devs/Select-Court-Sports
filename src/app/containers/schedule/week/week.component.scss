@@ -1,16 +1,16 @@
 @import 'src/styles';
 .daysWeek{
-    @extend %listStyle;
+    @extend %listStyleNone;
     @include box($maxWidthPrimary, auto);
     @include flex(center, center, row);
     @include theme($bgColorQuaternary,none, 0);
     li{
         @include flex(center, center, row);
-        @include text($fontColorPrimary, none, normal, Raleway, 500, 13px);
+        @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSmall, 13px);
         padding: 9px 0px;
         &:not(:last-child){
             p{
-                border-right: 1px solid white;
+                border-right: $borderSolidSmall $borderColorTertiary;
                 padding: 0px 10px;
             }
         }

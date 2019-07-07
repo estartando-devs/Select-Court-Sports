@@ -3,8 +3,8 @@
     @include flex(flex-start, center, column);
     @include box($maxWidthPrimary, $maxHeightPrimary);
     @include theme($bgColorSecondary, none, 0);
+    @extend %positionFixed;
     transition: all ease-in-out .3s;
-    position: fixed;
     z-index: 4;
     top: 0;
     right: -100vw;
@@ -30,20 +30,20 @@
             border-radius: 45px;
         }
         h2{
-            @include text($fontColorPrimary, none, normal, Raleway, 500, 18px);
+            @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSmall, 18px);
             @include flex(center, center, column);
             @include box(auto, auto);
             padding: 10px 0px;
-            border-bottom: $borderSolidPrimary $borderColorPrimary;
+            border-bottom: $borderSolidSmall $borderColorPrimary;
         }
     }
     .trunkNav{
         @include flex(flex-start, center, column);
         @include box($maxWidthPrimary, 65vh);
-        @extend %listStyle;
+        @extend %listStyleNone;
         margin-top: 20px;
         li{
-            @include text($fontColorPrimary, none, normal, Raleway, 500, 18px);
+            @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSmall, 18px);
             @include flex(center, center, column);
             @include box(100%, auto);
             padding: 10px 0px;

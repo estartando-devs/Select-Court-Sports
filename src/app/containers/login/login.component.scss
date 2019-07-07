@@ -5,12 +5,12 @@
     @include box($maxWidthPrimary, $maxHeightPrimary);
     p{
         margin: 5px 0;
-        @include text($fontColorQuaternary, none, normal, $fontPrimary, $fontWeightSecondary, $fontSizeTertiary);
+        @include text($fontColorQuaternary, none, normal, $fontPrimary, $fontWeightSmall, $fontSizeTertiary);
     }
 
     .link, .link:visited{
-      @include text($fontColorQuaternary, none, normal, $fontPrimary, $fontWeightSecondary, $fontSizeTertiary);
-      text-decoration: none;
+      @include text($fontColorQuaternary, none, normal, $fontPrimary, $fontWeightSmall, $fontSizeTertiary);
+      @extend %textDecorationNone;
       font-weight: bold;
     }
 }

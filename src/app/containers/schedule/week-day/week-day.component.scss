@@ -2,13 +2,12 @@
 .weekDayContainer{
     @include box($maxWidthPrimary, auto);
     @include flex(space-around, center, row);
-    overflow: scroll;
-    flex-wrap: nowrap;
+    margin: 15px 0px;
     .days{
-        @include theme(none, $borderSolidPrimary $borderColorSecondary, 50%);
-        @include text($fontColorPrimary, none, normal, Raleway, 500, 15px);
-        padding: 4px 9px;
-        margin: 30px 0px;
+        @include box(31px, 31px);
+        @include theme(none, $borderSolidSmall $borderColorSecondary, $borderRadiusLarge);
+        @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSmall, 15px);
+        @include flex(center, center, row);
     }
     .disabled{
       background-color: $borderColorQuaternary;

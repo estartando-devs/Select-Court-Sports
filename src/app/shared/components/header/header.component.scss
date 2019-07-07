@@ -1,13 +1,12 @@
 @import 'src/styles';
 .navbar{
-  position: fixed;
+  @include flex(center, center, column);
+  @include box($maxWidthPrimary, 55px);
+  @extend %positionFixed;
   top: 0;
   left: 0;
   z-index: 2;
-  height: 55px;
-  width: 100vw;
   background-color: $bgColorPrimary;
-  @include flex(center, center, column);
   #open{
     align-self: flex-end;
     width: 25px;
@@ -22,7 +21,7 @@
     display: none;
   }
   .nav{
-    @include text($fontColorPrimary, none, none, Raleway, 500px, 18px);
+    @include text($fontColorPrimary, none, none, $fontPrimary, $fontWeightSmall, 18px);
     @include flex(space-around, center, row);
     list-style: none;
     li {padding: 0px 10px;}
