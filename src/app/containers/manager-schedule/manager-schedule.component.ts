@@ -12,6 +12,7 @@ export class ManagerScheduleComponent implements OnInit {
 
   public lang = LANG;
   formSchedule: FormGroup
+
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {

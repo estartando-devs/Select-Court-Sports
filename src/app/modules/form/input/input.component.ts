@@ -19,7 +19,7 @@ export class InputComponent implements OnInit {
   @Input() bord = "";
   @Input() borderbottom = "";
   @Input() borderradius = "";
-  @Input() formControlName = "formControlName";
+  @Input() controlName = "";
   @Output() change = new EventEmitter()
 
   constructor() {}
