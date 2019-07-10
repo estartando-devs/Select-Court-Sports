@@ -67,16 +67,16 @@ export const MENU = {
     LOGOUT_ROUTER: "/",
 
     SCHEDULING: "Fazer agendamento",
-    SROUTER: "/schedule",
+    SROUTER: "/fazeragendamento",
 
     MYHOURS: "Meus Horários",
-    MHROUTER: "/myhours",
+    MHROUTER: "/meushorarios",
 
     SCHEDULE: "Agendar",
     SCHROUTER: "/",
 
     CONTACT: "Contato",
-    CROUTER: "/contact"
+    CROUTER: "/contato"
 }
 
 export const MODELS = {

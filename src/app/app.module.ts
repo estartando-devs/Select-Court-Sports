@@ -40,7 +40,6 @@ import { ManagerScheduleComponent } from './containers/manager-schedule/manager-
     HeaderModule,
     CourtsModule,
     ReactiveFormsModule,
-    ContactModule
   ],
   providers: [AuthService, AngularFireAuth, AuthGuardService],
   bootstrap: [AppComponent]

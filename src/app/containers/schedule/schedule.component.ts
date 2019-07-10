@@ -31,7 +31,7 @@ export class ScheduleComponent implements OnInit {
     this.scheduleService.date.subscribe(date=>{
       // Atualiza o mês selecionado por numero (0 - 11)
       this.month = monthByNumber(date.getMonth())
-      console.log("DATA ATUAL --> ", date)
+      // console.log("DATA ATUAL --> ", date)
     })
   }
 

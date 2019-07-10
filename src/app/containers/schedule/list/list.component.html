@@ -1,11 +1,15 @@
-<table class="tableContainer">
-  <tr class="thead">
-    <th *ngFor= "let item of lang.tHeadSchedule">{{item}}</th>
-  </tr>
-  <tr class="tbody">
-    <td>10h - 11h</td>
-  </tr>
-  <tr class="tbody">
-    <td>11h - 12h</td>
-  </tr>
-</table>
+<div class="tableContainer">
+  <div class="thead">
+    <div class="tr">
+      <div class="th" *ngFor= "let item of lang.tHeadSchedule">{{item}}</div>
+    </div>
+  </div>
+  <div class="tbody">
+    <div class="tr" *ngFor="let item of generalHours">
+      <div class="td">{{item.date.getHours()}}h</div>
+      <div class="td">R${{item.price}}</div>
+      <div class="td">{{item.status}}</div>
+    </div>
+  </div>    
+</div>
+

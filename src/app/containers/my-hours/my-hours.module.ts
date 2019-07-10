@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MyHoursComponent } from './my-hours.component';
 import { ListMyHoursComponent } from './list-my-hours/list-my-hours.component';
+import { MyHoursRoutingModule } from './my-hours-routing.module';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { ListMyHoursComponent } from './list-my-hours/list-my-hours.component';
     ListMyHoursComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MyHoursRoutingModule
   ]
 })
 export class MyHoursModule { }

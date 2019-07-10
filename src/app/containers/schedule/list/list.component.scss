@@ -1,28 +1,39 @@
 @import 'src/styles';
 .tableContainer{
     @extend %borderSpacingNone;
-    @include box($maxWidthPrimary, auto);
+    @include box($maxWidthPrimary, null);
     .thead{
-        th{
-            @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSmall, 14px);
-            border-bottom:  $borderSolidSmall $borderColorPrimary;
-            padding: 13px 0px;     
-            background: black;
-            &:not(:nth-child(3)){
-                border-right:  $borderSolidSmall $borderColorSecondary;
+        .tr{
+            display: flex;
+            .th{
+                @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSmall, 14px);
+                @include box(calc(100vw / 3), null);
+                @extend %textAlignCenter;
+                border-bottom:  $borderSolidSmall $borderColorPrimary;
+                padding: 13px 0px;     
+                background: black;
+                &:not(:nth-child(3)){
+                    border-right:  $borderSolidSmall $borderColorSecondary;
+                }                
             }
         }
     }
     .tbody{
-        @include box($maxWidthPrimary, auto);
-        background: black;
-        &:nth-child(2n+0) {
-            background: $bgColorQuinary;
+        overflow-y: scroll;
+        height: calc(100vh - 295px);
+        scrollbar-width: none;
+        .tr{
+            background: black;
+            display: flex;
+            &:nth-child(2n+0) {
+                background: $bgColorQuinary;
+            }
+            .td{
+                @include text($fontColorPrimary, none, none,$fontPrimary, $fontWeightSmall, 12px);
+                @include box(calc(100vw / 3), null);
+                @extend %textAlignCenter;
+                padding: 13px 0px;
+            }   
         }
-        td{
-            @include flex(center, center, row);
-            @include text($fontColorPrimary, none, normal,$fontPrimary, $fontWeightSmall, 12px);
-            padding: 13px 0px;
-        }   
     }
 }

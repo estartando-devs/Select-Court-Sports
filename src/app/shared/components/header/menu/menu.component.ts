@@ -88,7 +88,7 @@ export class MenuComponent implements OnInit {
 
         return {...item, active: false}
        })
-      console.log("ROUTER STATE --> ", this.options)
+      // console.log("ROUTER STATE --> ", this.options)
     })
   }
 

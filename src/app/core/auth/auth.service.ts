@@ -17,7 +17,7 @@ export class AuthService {
   constructor(private db: DbService,private afAuth: AngularFireAuth) {
     this.isLogged = afAuth.authState.pipe(map(user=>!!user))
     this.user = afAuth.authState.pipe(map(user=>{
-      console.log("USUARIO LOGADO --> ", user)
+      // console.log("USUARIO LOGADO --> ", user)
       return user}))
   }
 
