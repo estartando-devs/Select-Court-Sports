@@ -12,6 +12,7 @@ import { ScheduleModule } from './containers/schedule/schedule.module';
 import { WeekDayComponent } from './containers/schedule/week-day/week-day.component';
 import { MyHoursModule } from './containers/my-hours/my-hours.module';
 import { MyHoursComponent } from './containers/my-hours/my-hours.component';
+import { ManagerScheduleComponent } from './containers/manager-schedule/manager-schedule.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: "schedule", component: ScheduleComponent},
   // {path: "day", component: WeekDayComponent}
   {path: "schedule", component: ScheduleComponent},
-  {path: "myhours", component: MyHoursComponent}
+  {path: "myhours", component: MyHoursComponent},
+  {path: "admin", component: ManagerScheduleComponent}
 ]
 
 @NgModule({
