@@ -11,21 +11,26 @@ import { LANG } from 'src/theme/pt';
 export class ManagerScheduleComponent implements OnInit {
 
   public lang = LANG;
-  formSchedule: FormGroup
+  public formSchedule: FormGroup
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.createForm(new Schedule());
+    this.formSchedule.valueChanges.subscribe(value=>{
+      console.log(value)
+    })
   }
 
   createForm(_schedule: Schedule){
     this.formSchedule = this.formBuilder.group({
-      date: [_schedule.date],
-      price: [_schedule.price],
-      status: [_schedule.status]
+      date: [""],
+      price: [""],
+      status: [""]
+      // date: [_schedule.date],
+      // price: [_schedule.price],
+      // status: [_schedule.status]
     })
-    console.log(this.formSchedule)
   }
 
 }

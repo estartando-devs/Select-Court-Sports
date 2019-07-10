@@ -2,35 +2,25 @@
   <p>{{lang.NEW_ACOUNT}}</p>
   <form [formGroup]="formSchedule">
     <app-input
-      (change)="onChange($event, 'displayName')"
       label=""
       placeholder="{{lang.PH_NAME}}"
-      controlName="date">
+      formControlName="date">
     </app-input>
     <app-input
-      (change)="onChange($event, 'email')"
       label=""
       placeholder="{{lang.PH_EMAIL}}"
       type="email"
       id="1"
-      controlName="price">
+      formControlName="price">
     </app-input>
     <app-input
-      (change)="onChange($event, 'phoneNumber')"
       label=""
       placeholder="{{lang.PH_TEL}}"
       type="number"
       id="3"
-      controlName="status">
+      formControlName="status">
     </app-input>
-    <app-input
-      (change)="onChange($event, 'team')"
-      label=""
-      placeholder="{{lang.HEART_TEAM}}"
-      id="6"
-      bord="none"
-      borderradius="0">
-    </app-input>
+
   </form>
 
   <app-button
