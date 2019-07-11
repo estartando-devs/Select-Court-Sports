@@ -21,6 +21,7 @@ import { HeaderModule } from './shared/components/header/header.module';
 import { CalendarComponent } from './shared/components/calendar/calendar.component';
 import { ContactModule } from './containers/contact/contact.module';
 import { ManagerScheduleComponent } from './containers/manager-schedule/manager-schedule.component';
+import { OptionsAdmComponent } from './containers/manager-schedule/options-adm/options-adm.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ManagerScheduleComponent } from './containers/manager-schedule/manager-
     HomeComponent,
     CalendarComponent,
     ManagerScheduleComponent,
+    OptionsAdmComponent,
   ],
   imports: [
     BrowserModule,
