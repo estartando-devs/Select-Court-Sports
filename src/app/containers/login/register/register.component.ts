@@ -43,6 +43,7 @@ export class RegisterComponent implements OnInit {
   async signup(){
     const res = await this.auth.signup(this.user)
     console.log("response signup - ", res)
+    this.router.navigate(['/home'])
   }
 
 }
