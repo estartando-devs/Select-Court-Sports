@@ -1,11 +1,20 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, forwardRef } from '@angular/core';
+import { FormGroup, FormBuilder, NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import { BaseControlValueAccessor } from 'src/helpers/baseControlValueAccessor';
 
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss']
+  styleUrls: ['./input.component.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => InputComponent),
+      multi: true
+    }
+  ]
 })
-export class InputComponent implements OnInit {
+export class InputComponent extends BaseControlValueAccessor<string> {
 
   @Input() type: string = "text";
   @Input() color: string = "";
@@ -15,14 +24,10 @@ export class InputComponent implements OnInit {
   @Input() id: string = "0";
   @Input() label: boolean = false;
   @Input() iconLabel: string;
-  @Input() placeholder: string = "";
-  @Input() bord: string = "";
-  @Input() borderbottom: string = "";
-  @Input() borderradius: string = "";
-
-  @Output() change = new EventEmitter()
-
-  constructor() {}
+  @Input() placeholder = "";
+  @Input() bord = "";
+  @Input() borderbottom = "";
+  @Input() borderradius = "";
 
   getStyle() {
     return {
@@ -37,9 +42,7 @@ export class InputComponent implements OnInit {
     };
   }
 
-  onChange(event){
-    this.change.emit(event)
+  handleChange(event){
+    this.onChange(event.target.value)
   }
-
-  ngOnInit() {}
 }

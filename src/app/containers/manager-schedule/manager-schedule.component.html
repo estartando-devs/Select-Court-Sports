@@ -1,0 +1,29 @@
+<section class="registerContainer">
+  <p>{{lang.NEW_ACOUNT}}</p>
+  <form [formGroup]="formSchedule">
+    <app-input
+      label=""
+      placeholder="{{lang.PH_NAME}}"
+      formControlName="date">
+    </app-input>
+    <app-input
+      label=""
+      placeholder="{{lang.PH_EMAIL}}"
+      type="email"
+      id="1"
+      formControlName="price">
+    </app-input>
+    <app-input
+      label=""
+      placeholder="{{lang.PH_TEL}}"
+      type="number"
+      id="3"
+      formControlName="status">
+    </app-input>
+
+  </form>
+
+  <app-button
+  (click)="[signup(), toggleModal()]">
+    {{lang.CREATE_ACCOUNT}}</app-button>
+</section>

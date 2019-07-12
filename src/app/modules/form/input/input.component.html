@@ -6,7 +6,7 @@ class="box-input"
       <i [ngClass]="['fas', 'fa-'+iconLabel]"></i>
   </label>
   <input
-  (input)="onChange($event)"
+  (input)="handleChange($event)"
   [type]=type
   [ngClass]="['input', type]"
   [id]=id
