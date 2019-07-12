@@ -4,6 +4,7 @@ import { AuthService } from '../../../core/auth/auth.service';
 import { User } from '../../../shared/models/user';
 import { Router } from '@angular/router';
 import { ModalService } from 'src/app/shared/components/modal/modal.service';
+import { FormBuilder, FormGroup, RequiredValidator, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -13,16 +14,8 @@ import { ModalService } from 'src/app/shared/components/modal/modal.service';
 export class RegisterComponent implements OnInit {
 
   public lang = LANG;
-  private user = {
-    confirmPassword: "123456",
-    displayName: "Alan Luiz",
-    email: "alan@alan",
-    password: "123456",
-    phoneNumber: "21964780203",
-    photoUrl: "",
-    team: "Botafogo"
-  };
-  constructor(private auth: AuthService, private modalService: ModalService, private router: Router) { }
+  private user: FormGroup
+  constructor(private fb:FormBuilder  , private auth: AuthService, private modalService: ModalService, private router: Router) { }
 
   toggleModal(){
     this.modalService.toggleModal()
@@ -33,11 +26,14 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  onChange(event, atr){
-    const val = event.target.value
-    this.user[atr] = val
+    this.user = this.fb.group({
+      "email": ["", Validators.required],
+      "team": [""],
+      "displayName": [""],
+      "phoneNumber": [""],
+      "password": [""],
+      "confirmPassword": [""]
+    })
   }
 
   async signup(){

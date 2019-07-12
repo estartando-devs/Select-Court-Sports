@@ -1,26 +1,26 @@
-<section class="registerContainer">
+<section class="registerContainer" [formGroup]="user">
   <p>{{lang.NEW_ACOUNT}}</p>
   <app-input
-    (change)="onChange($event, 'displayName')"
+    formControlName="displayName"
     label=""
     placeholder="{{lang.PH_NAME}}">
   </app-input>
   <app-input
-    (change)="onChange($event, 'email')"
+    formControlName="email"
     label=""
     placeholder="{{lang.PH_EMAIL}}"
     type="email"
     id="1">
   </app-input>
   <app-input
-    (change)="onChange($event, 'phoneNumber')"
+    formControlName="displayName"
     label=""
     placeholder="{{lang.PH_TEL}}"
     type="number"
     id="3">
   </app-input>
   <app-input
-    (change)="onChange($event, 'team')"
+    formControlName="team"
     label=""
     placeholder="{{lang.HEART_TEAM}}"
     id="6"
@@ -29,7 +29,7 @@
   </app-input>
   <hr>
   <app-input
-    (change)="onChange($event, 'password')"
+    formControlName="password"
     label="password"
     iconLabel="unlock"
     placeholder="{{lang.PH_PASSWORD}}"
@@ -37,7 +37,7 @@
     type="password">
   </app-input>
   <app-input
-    (change)="onChange($event, 'confirmPassword')"
+    formControlName="confirmPassword"
     label="password"
     iconLabel="unlock"
     placeholder="{{lang.CONFIRM_PASSWORD}}"
