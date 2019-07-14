@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LANG } from 'src/theme/pt';
 import { ModalService } from 'src/app/shared/components/modal/modal.service';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +11,8 @@ import { ModalService } from 'src/app/shared/components/modal/modal.service';
 export class ContactComponent implements OnInit {
 
   public lang = LANG;
-  constructor( private modalService: ModalService) { }
+  public contactForm: FormGroup
+  constructor( private fb:FormBuilder, private modalService: ModalService) { }
 
   toggleModal(){
     this.modalService.toggleModal();
@@ -25,6 +27,16 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.createForm()
+  }
+
+  createForm(){
+    this.contactForm = this.fb.group({
+      "name": [""],
+      "email": [""],
+      "tel": [""],
+      "message": [""]
+    })
   }
 
 }

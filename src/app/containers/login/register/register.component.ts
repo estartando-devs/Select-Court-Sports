@@ -14,7 +14,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
   public lang = LANG;
-  public user: FormGroup
+  public userForm: FormGroup
   constructor(private fb:FormBuilder  , private auth: AuthService, private modalService: ModalService, private router: Router) { }
 
   toggleModal(){
@@ -30,13 +30,13 @@ export class RegisterComponent implements OnInit {
   }
 
   async signup(){
-    const res = await this.auth.signup(this.user)
+    const res = await this.auth.signup(this.userForm)
     console.log("response signup - ", res)
     this.router.navigate(['/home'])
   }
 
   createForm(){
-    this.user = this.fb.group({
+    this.userForm = this.fb.group({
       "email": ["", Validators.required],
       "team": [""],
       "displayName": [""],

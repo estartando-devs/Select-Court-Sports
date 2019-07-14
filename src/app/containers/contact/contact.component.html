@@ -1,12 +1,12 @@
-<section class="contactContainer">
+<section class="contactContainer" [formGroup]="contactForm">
   <div>
     <img id="back" src="../../../assets/img/back.png" alt="back" (click)="back()">
     <h2>Fale Conosco</h2>
   </div>
-  <app-input [placeholder]="lang.PH_NAME"></app-input>
-  <app-input [placeholder]="lang.PH_EMAIL"></app-input>
-  <app-input [placeholder]="lang.PH_TEL"></app-input>
-  <app-input [placeholder]="lang.PH_MESSAGE" bord="none" borderradius="0"></app-input>
+  <app-input formControlName="name" [placeholder]="lang.PH_NAME"></app-input>
+  <app-input formControlName="email" [placeholder]="lang.PH_EMAIL"></app-input>
+  <app-input formControlName="tel" [placeholder]="lang.PH_TEL"></app-input>
+  <app-input formControlName="message" [placeholder]="lang.PH_MESSAGE" bord="none" borderradius="0"></app-input>
   <app-button (click)="toggleModal()">Enviar</app-button>
 </section>
 
