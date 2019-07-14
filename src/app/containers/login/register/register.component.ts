@@ -4,7 +4,7 @@ import { AuthService } from '../../../core/auth/auth.service';
 import { User } from '../../../shared/models/user';
 import { Router } from '@angular/router';
 import { ModalService } from 'src/app/shared/components/modal/modal.service';
-import { FormBuilder, FormGroup, RequiredValidator, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +14,7 @@ import { FormBuilder, FormGroup, RequiredValidator, Validators } from '@angular/
 export class RegisterComponent implements OnInit {
 
   public lang = LANG;
-  private user: FormGroup
+  public user: FormGroup
   constructor(private fb:FormBuilder  , private auth: AuthService, private modalService: ModalService, private router: Router) { }
 
   toggleModal(){
@@ -26,6 +26,16 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.createForm()
+  }
+
+  async signup(){
+    const res = await this.auth.signup(this.user)
+    console.log("response signup - ", res)
+    this.router.navigate(['/home'])
+  }
+
+  createForm(){
     this.user = this.fb.group({
       "email": ["", Validators.required],
       "team": [""],
@@ -34,12 +44,6 @@ export class RegisterComponent implements OnInit {
       "password": [""],
       "confirmPassword": [""]
     })
-  }
-
-  async signup(){
-    const res = await this.auth.signup(this.user)
-    console.log("response signup - ", res)
-    this.router.navigate(['/home'])
   }
 
 }
