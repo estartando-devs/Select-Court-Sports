@@ -21,7 +21,10 @@ import { HeaderModule } from './shared/components/header/header.module';
 import { CalendarComponent } from './shared/components/calendar/calendar.component';
 import { ContactModule } from './containers/contact/contact.module';
 import { ManagerScheduleComponent } from './containers/manager-schedule/manager-schedule.component';
+<<<<<<< HEAD
 import { OptionsAdmComponent } from './containers/manager-schedule/options-adm/options-adm.component';
+=======
+>>>>>>> develop
 
 @NgModule({
   declarations: [

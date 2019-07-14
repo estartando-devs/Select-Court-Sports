@@ -7,7 +7,10 @@ import { AuthGuardService } from './core/guard/auth-guard.service';
 import { AuthGuardReverseService } from './core/guard/auth-guard-reverse.service';
 import { ScheduleModule } from './containers/schedule/schedule.module';
 import { MyHoursModule } from './containers/my-hours/my-hours.module';
+<<<<<<< HEAD
 import { MyHoursComponent } from './containers/my-hours/my-hours.component';
+=======
+>>>>>>> develop
 import { ManagerScheduleComponent } from './containers/manager-schedule/manager-schedule.component';
 
 const routes: Routes = [
@@ -20,7 +23,10 @@ const routes: Routes = [
   {path: "contato", loadChildren: () => import('./containers/contact/contact.module').then(contact => contact.ContactModule)},
   {path: "fazeragendamento", loadChildren: () => import('./containers/schedule/schedule.module').then(()=> ScheduleModule)},
   {path: "meushorarios", loadChildren: () => import('./containers/my-hours/my-hours.module').then(() => MyHoursModule)},
+<<<<<<< HEAD
   // {path: "test-service", component: CourtsComponent, canActivate: [AuthGuardService]}
+=======
+>>>>>>> develop
   {path: "admin", component: ManagerScheduleComponent}
 ]
 
