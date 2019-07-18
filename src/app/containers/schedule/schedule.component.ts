@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { LANG } from 'src/theme/pt';
 import { ScheduleService } from './schedule.service';
 import { Observable, of } from 'rxjs';
-import { Filter, Turn } from './schedule.model';
+import { Filter } from './schedule.model';
 import { switchMap } from 'rxjs/operators';
 import { ModalService } from 'src/app/shared/components/modal/modal.service';
 import { MONTHS, monthByNumber} from '../../../helpers/date'
 import * as moment from 'moment';
 import 'moment/locale/pt-br';
+import { Turn } from 'src/app/modules/calendar/turn/turn.model';
 
 
 @Component({

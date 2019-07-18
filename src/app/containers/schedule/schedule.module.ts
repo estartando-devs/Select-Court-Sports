@@ -1,29 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WeekComponent } from './week/week.component';
 import { ListComponent } from './list/list.component';
 import { ScheduleComponent } from './schedule.component';
 import { HeaderModule } from 'src/app/shared/components/header/header.module';
-import { TurnComponent } from './turn/turn.component';
 import { ModalModule } from 'src/app/shared/components/modal/modal.module';
-import { SelectMonthComponent } from './select-month/select-month.component';
-import { WeekDayComponent } from './week-day/week-day.component';
 import { ScheduleRoutingModule } from './schedule-routing.module';
+import { CalendarModule } from 'src/app/modules/calendar/calendar.module';
 
 @NgModule({
   declarations: [
     ScheduleComponent,
-    WeekComponent,
-    ListComponent,
-    TurnComponent,
-    SelectMonthComponent,
-    WeekDayComponent
+    ListComponent
   ],
   imports: [
     CommonModule,
     ScheduleRoutingModule,
     HeaderModule,
     ModalModule,
+    CalendarModule
   ]
 })
 export class ScheduleModule { }

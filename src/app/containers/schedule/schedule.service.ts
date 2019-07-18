@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Filter, Turn } from './schedule.model';
+import { Filter } from './schedule.model';
 import { deepClone } from 'lodash';
+import { Turn } from 'src/app/modules/calendar/turn/turn.model';
 
 @Injectable({
   providedIn: 'root'

@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Observable, of, BehaviorSubject } from 'rxjs';
-import { Turn } from '../schedule.model';
+import { Turn } from './turn.model';
 
 @Component({
   selector: 'app-turn',
