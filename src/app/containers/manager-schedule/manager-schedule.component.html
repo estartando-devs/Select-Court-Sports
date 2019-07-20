@@ -1,3 +1,10 @@
+<div id="manager-schedule">
+  <app-checkbox
+    (setHour)="setHour($event)"
+    *ngFor="let hour of hours"
+    [label]="hour.label"
+    [value]="hour.value" >
+  </app-checkbox>
 <section class="registerContainer">
   <p>{{lang.NEW_ACOUNT}}</p>
   <form [formGroup]="formSchedule">
@@ -27,3 +34,4 @@
   (click)="[signup(), toggleModal()]">
     {{lang.CREATE_ACCOUNT}}</app-button>
 </section>
+</div>

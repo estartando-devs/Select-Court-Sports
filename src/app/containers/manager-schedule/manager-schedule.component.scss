@@ -1,5 +1,6 @@
 @import 'src/styles';
-
+#manager-schedule{
+  background-color: black;
 .registerContainer{
     p{
         @include box($maxWidthSecondary, auto);
@@ -11,4 +12,5 @@
     hr{
         border-color: $borderColorPrimary;
     }
+}
 }

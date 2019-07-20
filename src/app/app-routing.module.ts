@@ -12,7 +12,7 @@ import { ManagerScheduleComponent } from './containers/manager-schedule/manager-
 
 const routes: Routes = [
   {
-    path: "",
+    path: "srsrs",
     component: HomeComponent
   },
   {path:"home",component: HomeComponent},
@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: "fazeragendamento", loadChildren: () => import('./containers/schedule/schedule.module').then(()=> ScheduleModule)},
   {path: "meushorarios", loadChildren: () => import('./containers/my-hours/my-hours.module').then(() => MyHoursModule)},
   // {path: "test-service", component: CourtsComponent, canActivate: [AuthGuardService]}
-  {path: "admin", component: ManagerScheduleComponent}
+  {path: "", component: ManagerScheduleComponent}
 ]
 
 @NgModule({

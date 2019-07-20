@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { InputComponent } from './input/input.component';
 import { ButtonComponent } from './button/button.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 @NgModule({
   declarations: [
     InputComponent,
-    ButtonComponent
+    ButtonComponent,
+    CheckboxComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   exports: [
     InputComponent,
-    ButtonComponent
+    ButtonComponent,
+    CheckboxComponent
   ]
 })
 export class FormModule { }

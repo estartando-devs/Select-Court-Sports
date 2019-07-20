@@ -1,0 +1,24 @@
+@import 'src/styles';
+
+#container{
+  @include flex(initial, center, initial);
+}
+
+#check{
+  @include box(17px, 17px);
+  border-radius: 9.5px;
+  border: solid 2px white;
+}
+
+#toggle{
+  // display: none
+}
+
+#label{
+  @include text($fontColorPrimary, none, none, $fontPrimary, normal, $buttonFontSmall);
+  margin-left: 15px;
+}
+
+#check:checked ~ #check{
+  background-color: white
+}
