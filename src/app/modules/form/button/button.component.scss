@@ -17,13 +17,15 @@
 }
 
 .btn{
-  @include box($buttonBoxWidth, $buttonBoxHeigth);
+  // @include box($buttonBoxWidth, $buttonBoxHeigth);
+
   @include text($fontColorPrimary, none, none, $fontPrimary, normal, $buttonFontSmall);
   @include theme(none, none, $borderRadiusSmall);
   @extend %pointerCursor;
   @extend %hiddenOverflow;
+  padding: 10px 25px;
   margin: $marginPrimary;
-  max-width: $maxWidthSecondary;
+  max-width: $buttonBoxWidth;
   transition: $transitionPrimary;
   white-space:nowrap;
   text-overflow: ellipsis;

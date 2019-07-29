@@ -17,7 +17,7 @@ export class WeekDayComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.$date.subscribe(date=>{
+    this.$date && this.$date.subscribe(date=>{
       this.date = date
       let copyDate
       let firstDayOfWeek

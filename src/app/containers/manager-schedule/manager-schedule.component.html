@@ -1,37 +1,30 @@
 <div id="manager-schedule">
-  <app-checkbox
-    (setHour)="setHour($event)"
-    *ngFor="let hour of hours"
-    [label]="hour.label"
-    [value]="hour.value" >
-  </app-checkbox>
-<section class="registerContainer">
-  <p>{{lang.NEW_ACOUNT}}</p>
-  <form [formGroup]="formSchedule">
-    <app-input
-      label=""
-      placeholder="{{lang.PH_NAME}}"
-      formControlName="date">
-    </app-input>
-    <app-input
-      label=""
-      placeholder="{{lang.PH_EMAIL}}"
-      type="email"
-      id="1"
-      formControlName="price">
-    </app-input>
-    <app-input
-      label=""
-      placeholder="{{lang.PH_TEL}}"
-      type="number"
-      id="3"
-      formControlName="status">
-    </app-input>
+    <app-header></app-header>
 
-  </form>
+    <app-week
+    (setWeekDay)="setWeekDay($event)"
+    selectable=true
+    ></app-week>
 
-  <app-button
-  (click)="[signup(), toggleModal()]">
-    {{lang.CREATE_ACCOUNT}}</app-button>
-</section>
+    <div class="container-hours">
+      <app-checkbox
+        (setHour)="setHour($event)"
+        *ngFor="let hour of hours"
+        [label]="hour.label"
+        [value]="hour.value" >
+      </app-checkbox>
+    </div>
+
+  <div class="row">
+    <app-button
+    (click)="[signup(), toggleModal()]">
+      {{lang.REPEAT}}
+    </app-button>
+
+    <app-button
+    (click)="[signup(), toggleModal()]">
+      {{lang.SAVE}}
+    </app-button>
+  </div>
+
 </div>

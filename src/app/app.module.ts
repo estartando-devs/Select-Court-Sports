@@ -20,16 +20,12 @@ import { AuthGuardService } from './core/guard/auth-guard.service';
 import { HeaderModule } from './shared/components/header/header.module';
 import { CalendarComponent } from './shared/components/calendar/calendar.component';
 import { ContactModule } from './containers/contact/contact.module';
-import { ManagerScheduleComponent } from './containers/manager-schedule/manager-schedule.component';
-import { OptionsAdmComponent } from './containers/manager-schedule/options-adm/options-adm.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CalendarComponent,
-    ManagerScheduleComponent,
-    OptionsAdmComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,

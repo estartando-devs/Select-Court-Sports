@@ -2,6 +2,8 @@
 
 #container{
   @include flex(initial, center, initial);
+  height: 22px;
+  margin: 5px 0;
 }
 
 #check{

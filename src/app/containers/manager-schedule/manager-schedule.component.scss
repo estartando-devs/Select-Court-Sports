@@ -1,16 +1,29 @@
 @import 'src/styles';
 #manager-schedule{
   background-color: black;
-.registerContainer{
-    p{
-        @include box($maxWidthSecondary, auto);
-        @include flex(center, center, column);
-        color: $fontColorSecondary;
-    }
-    @include flex(center, center, column);
-    @include box($maxWidthPrimary, $maxHeightPrimary);
-    hr{
-        border-color: $borderColorPrimary;
-    }
-}
+  min-height: 100vh;
+  padding-top: 80px;
+  .registerContainer{
+      p{
+          @include box($maxWidthSecondary, auto);
+          @include flex(center, center, column);
+          color: $fontColorSecondary;
+      }
+      @include flex(center, center, column);
+      @include box($maxWidthPrimary, $maxHeightPrimary);
+      hr{
+          border-color: $borderColorPrimary;
+      }
+  }
+  .row{
+    @include flex(center, center, row)
+  }
+
+  .container-hours{
+    @include flex(center, flex-start, column);
+    flex-wrap: wrap;
+    height: (22px + 10px)*12;
+    margin: 20px $marginPage;
+  }
+
 }

@@ -12,6 +12,8 @@ export const LANG = {
     // BUTTON
     SIGN_IN: "Entrar",
     CREATE_ACCOUNT: "Criar conta",
+    REPEAT: "Repetir",
+    SAVE: "Salvar",
     LOGINFACEBOOK: "Entrar com o Facebook",
     LOGOUT: "Sair",
     RENT_NOW: "ALUGUE AGORA",
