@@ -14,8 +14,8 @@ const routes: Routes = [
   // {path:"",component: HomeComponent},
   {path: "login", canActivate: [AuthGuardReverseService],loadChildren: () => import('./containers/login/login.module').then(mod => mod.LoginModule)},
   {path: "contato", loadChildren: () => import('./containers/contact/contact.module').then(mod => mod.ContactModule)},
-  {path: "fazeragendamento", loadChildren: () => import('./containers/schedule/schedule.module').then(()=> ScheduleModule)},
-  {path: "meushorarios", loadChildren: () => import('./containers/my-hours/my-hours.module').then(() => MyHoursModule)},
+  {path: "fazeragendamento", loadChildren: () => import('./containers/schedule/schedule.module').then(mod=> mod.ScheduleModule)},
+  {path: "meushorarios", loadChildren: () => import('./containers/my-hours/my-hours.module').then(mod => mod.MyHoursModule)},
   // {path: "test-service", component: CourtsComponent, canActivate: [AuthGuardService]}
   // {path: "", component: ManagerScheduleComponent}
   {path: "", loadChildren: () => import('./containers/manager-schedule/manager-schedule.module').then(() => ManagerScheduleModule)},
