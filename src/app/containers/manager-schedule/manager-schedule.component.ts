@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
-import { Schedule, HoursConfig } from 'src/app/shared/models';
 import { LANG } from 'src/theme/pt';
 import * as moment from 'moment';
-import { ManagerScheduleService } from './manager-schedule.service';
-import { BehaviorSubject } from 'rxjs';
+import { ManagerScheduleService } from '../../core/services/manager-schedule.service';
 
 @Component({
   selector: 'app-manager-schedule',
@@ -14,20 +11,20 @@ import { BehaviorSubject } from 'rxjs';
 export class ManagerScheduleComponent implements OnInit {
 
   public lang = LANG;
-  public formSchedule: FormGroup
   public hours = []
-  // public date = new BehaviorSubject<Date>(new Date())
+  public weekDay = 0
 
   constructor(
-    // private formBuilder: FormBuilder, private hourConfigService: ManagerScheduleService
+    private managerScheduleService: ManagerScheduleService
     ) {}
 
   ngOnInit() {
     this.hours.push(...this.mountHoursObj())
-    this.createForm(new Schedule());
-    // this.formSchedule.valueChanges.subscribe(value=>{
-    //   console.log(value)
-    // })
+    this.managerScheduleService.getRulesDay().subscribe(res=>{
+      console.log(res)
+      res && res.length > 0 ? this.hours = [...this.hours, ...res[this.weekDay]] : null
+    })
+
   }
 
   setWeekDay(event){
@@ -39,6 +36,11 @@ export class ManagerScheduleComponent implements OnInit {
   }
 
   setHour(hour){
+    hour.value = !hour.value
+    this.hours[hour.label] = hour
+    console.log("hour --> ", hour)
+    console.log("hour --> ", this.hours)
+    // this.managerScheduleService.updateRule(this.hours, this.weekDay)
     // this.hourConfigService.setState(hour.label, hour.value)
   }
 
@@ -48,13 +50,4 @@ export class ManagerScheduleComponent implements OnInit {
       hours.push({label: i, value: false})
     return hours
   }
-
-  createForm(_schedule: Schedule){
-    // this.formSchedule = this.formBuilder.group({
-    //   date: [""],
-    //   price: [""],
-    //   status: [""]
-    // })
-  }
-
 }

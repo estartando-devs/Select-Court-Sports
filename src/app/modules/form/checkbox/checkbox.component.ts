@@ -13,7 +13,7 @@ export class CheckboxComponent implements OnInit {
   constructor() { }
 
   handleToggle(){
-    this.value = !this.value
+    // this.value = !this.value
     this.setHour.emit({label: this.label, value: this.value})
   }
 
