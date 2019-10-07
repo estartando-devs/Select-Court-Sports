@@ -58,6 +58,7 @@ export const LANG = {
 }
 export const MENU = {
     WELCOME: "Bem vindo",
+    HELLO:"Olá",
 
     HOME: "Home",
     HROUTER: "/",

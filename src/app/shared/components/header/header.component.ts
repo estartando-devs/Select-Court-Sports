@@ -3,6 +3,7 @@ import { MenuService } from './menu/menu.service';
 import { LANG, MENU } from 'src/theme/pt';
 import { Router } from "@angular/router";
 import { AuthService } from '../../../core/auth/auth.service';
+import { User } from '../../models';
 
 
 
@@ -17,17 +18,27 @@ export class HeaderComponent implements OnInit {
   public menu = MENU;
   public open : boolean;
   public options = [];
-  goTo: any;
-  logout: any;
+  public user: User;
 
   constructor(
     public router:  Router,
     public auth: AuthService,
     public menuService: MenuService
-  ) { }
+  ) { 
+    auth.user.subscribe(res => this.user = res)
+   }
 
   toggleMenu(){
     this.menuService.toggleMenu()
+  }
+
+  goTo(route){
+    this.router.navigate([route])
+  }
+
+  logout(){
+    this.auth.logoutSocial()
+    this.router.navigate([MENU.HROUTER])
   }
   
   ngOnInit() {

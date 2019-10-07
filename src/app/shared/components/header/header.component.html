@@ -1,7 +1,12 @@
 <app-menu></app-menu>
 <div class="navbar">
+    <div class="logo">LOGO</div>
     <ul class="nav">
         <li *ngFor="let item of options" (click)="item.action()">{{item.option}}</li>
+    </ul>
+    <ul class="displayName">
+        <li>{{menu.HELLO}}, {{user && user.displayName}}</li>
+        <li><img id="imgProfile" [src]="user && user.photoURL + '?type=square&width=120&height=120'" alt=""></li>
     </ul>
     <div id="open" (click)="toggleMenu()" [ngClass]="['fas', 'fa-bars']"></div>
 </div>

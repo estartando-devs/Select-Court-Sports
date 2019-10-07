@@ -2,7 +2,6 @@
 .homeContainer{
     @include flex(center, center, column);
     @include box($maxWidthPrimary, $maxHeightPrimary);
-    @extend %backgroundImage;
     h1{
         @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSmall, 35px);
         width: 65vw;
@@ -25,4 +24,40 @@
     @include box($maxWidthPrimary, $maxHeightPrimary);
     top:0;
     background-color: rgba(0, 0, 0, 0.75);
+}
+
+@include desktop{
+    .homeContainer{
+        background-image: url("../../../assets/img/deskBall.svg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        @include flex(center, flex-start, column);
+        padding-left: 81px;
+        // @include box($maxWidthPrimary, $maxHeightPrimary);
+        h1{
+            @include text($fontColorPrimary, none, normal, $fontPrimary, $fontWeightSmall, 48px);
+            width: 40vw;
+            z-index: 3;
+        }
+        app-button{
+            margin: 40px 0px 0px 0px;
+            z-index: 3;
+        }
+        div{
+            display: none
+        }
+    }
+    
+}
+
+.backgroundImage{
+    @extend %backgroundImage;
+};
+
+@include mobile{
+    .homeContainer{
+        @extend .backgroundImage;
+    }
 }

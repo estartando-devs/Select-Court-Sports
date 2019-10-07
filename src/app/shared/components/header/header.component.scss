@@ -1,4 +1,13 @@
 @import 'src/styles';
+
+// extents nao funcionam usados diretamente no @media
+.listStyleNone{
+  @extend %listStyleNone;
+};
+.pointerCursor{
+  @extend %pointerCursor
+};
+
 .navbar{
   @include flex(center, center, column);
   @include box($maxWidthPrimary, 55px);
@@ -16,20 +25,53 @@
   }
 }
 
-@include desktop{
-  #open{
-    display: none;
+@include desktop{  
+  .navbar{
+    @include flex(space-between, center, row);
+    .logo{
+      width: 40px;
+      height: 40px;
+      padding-left: 46px
+    }
+    .nav{
+      @include text($fontColorPrimary, none, none, $fontPrimary, $fontWeightSmall, 18px);
+      @include flex(space-around, center, row);
+      @extend .listStyleNone;
+      @extend .pointerCursor;
+      li{
+        padding: 0px 10px;
+        border-right: solid 1px white;
+        &:last-child{
+          border: none
+        }
+      }
+    }
+    .displayName{
+      @include text($fontColorPrimary, none, none, $fontPrimary, $fontWeightSmall, 18px);
+      @include flex(space-around, center, row);
+      @extend .listStyleNone;
+      li{
+        padding: 0px 10px;
+        // &:nth-child(1){
+        //   @extend .pointerCursor;
+        //  }
+        #imgProfile{
+          margin-top: 10px;
+          width: 40px;
+          height: 40px;
+          border-radius: 45px;
+        }
+      }
+    }
+    #open{
+      display: none;
+    }
   }
-  .nav{
-    @include text($fontColorPrimary, none, none, $fontPrimary, $fontWeightSmall, 18px);
-    @include flex(space-around, center, row);
-    list-style: none;
-    li {padding: 0px 10px;}
-  }
-}
+};
 
 @include mobile{
-  .nav{
+  .nav, .logo, .displayName{
     display: none;
   }
+
 }
