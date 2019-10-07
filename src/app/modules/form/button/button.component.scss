@@ -37,6 +37,15 @@
   }
 }
 
+@include desktop{
+  .btn{
+    
+    padding: 10px 100px;
+    max-width: 410px;
+    font-size: $buttonFontRegular
+  }
+}
+
 //BUTTON TYPES ------------------
 .clear{
   @include theme(transparent, $borderSolidRegular $buttonPrimary, none);
