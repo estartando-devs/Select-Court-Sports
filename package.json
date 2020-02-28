@@ -4,7 +4,7 @@
   "homepage": "https://estartando-devs.github.io/select-court-sports/",
   "scripts": {
     "ng": "ng",
-    "start": "link-module-alias && ng serve",
+    "start": "link-module-alias && ng serve -o",
     "build": "ng build --prod --output-path docs --base-href /select-court-sports/",
     "test": "ng test",
     "lint": "ng lint",
@@ -24,6 +24,8 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "@ngrx/store": "^8.6.0",
+    "@ngrx/store-devtools": "^8.6.0",
     "core-js": "^2.5.4",
     "firebase": "^6.0.2",
     "lodash": "^4.17.11",
